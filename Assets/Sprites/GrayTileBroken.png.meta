@@ -1,0 +1,780 @@
+fileFormatVersion: 2
+guid: 5f9f55bb81c218042b134fdb1b57458c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5587875715409452313
+    second: GrayTileBroken_0
+  - first:
+      213: 197069757954291578
+    second: GrayTileBroken_1
+  - first:
+      213: -66022727031114191
+    second: GrayTileBroken_2
+  - first:
+      213: -6253682335203392359
+    second: GrayTileBroken_3
+  - first:
+      213: 7662282400652147434
+    second: GrayTileBroken_4
+  - first:
+      213: 1060923986230637364
+    second: GrayTileBroken_5
+  - first:
+      213: -5130489760439332461
+    second: GrayTileBroken_6
+  - first:
+      213: 7717586859103739715
+    second: GrayTileBroken_7
+  - first:
+      213: -5961135525611948195
+    second: GrayTileBroken_8
+  - first:
+      213: -7139073426651231392
+    second: GrayTileBroken_9
+  - first:
+      213: 1978152217340314013
+    second: GrayTileBroken_10
+  - first:
+      213: 7546165697321190527
+    second: GrayTileBroken_11
+  - first:
+      213: -7984725358183553473
+    second: GrayTileBroken_12
+  - first:
+      213: 5831728436035820460
+    second: GrayTileBroken_13
+  - first:
+      213: 7988839801972673006
+    second: GrayTileBroken_14
+  - first:
+      213: -3788599480474516023
+    second: GrayTileBroken_15
+  - first:
+      213: 7215946314458114202
+    second: GrayTileBroken_16
+  - first:
+      213: -8976009997236833249
+    second: GrayTileBroken_17
+  - first:
+      213: 4743548149792986573
+    second: GrayTileBroken_18
+  - first:
+      213: -3103564231212115914
+    second: GrayTileBroken_19
+  - first:
+      213: -4702486850948006719
+    second: GrayTileBroken_20
+  - first:
+      213: 7169135960616298304
+    second: GrayTileBroken_21
+  - first:
+      213: -2205582889539859309
+    second: GrayTileBroken_22
+  - first:
+      213: 2357542678104960783
+    second: GrayTileBroken_23
+  - first:
+      213: 8664872461857995913
+    second: GrayTileBroken_24
+  - first:
+      213: -5883810332777419554
+    second: GrayTileBroken_25
+  - first:
+      213: 3475991631707393771
+    second: GrayTileBroken_26
+  - first:
+      213: -511276095010504235
+    second: GrayTileBroken_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GrayTileBroken_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1238
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d130a7b5f1c8d40800000000000000
+      internalID: 5587875715409452313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_1
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1238
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7776d696e12cb200800000000000000
+      internalID: 197069757954291578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_2
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1234
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1363538fda0751ff0800000000000000
+      internalID: -66022727031114191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_3
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 1234
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9940110bc057639a0800000000000000
+      internalID: -6253682335203392359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_4
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1238
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea39933f35e55a60800000000000000
+      internalID: 7662282400652147434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_5
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1008
+        width: 209
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 433f7f49eb829be00800000000000000
+      internalID: 1060923986230637364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_6
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1008
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3911c31deb6dcc8b0800000000000000
+      internalID: -5130489760439332461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1008
+        width: 209
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fd91cdb506a1b60800000000000000
+      internalID: 7717586859103739715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_8
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 936
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5730f9a2dac54da0800000000000000
+      internalID: -5961135525611948195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_9
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 936
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06bc50bfa8aecec90800000000000000
+      internalID: -7139073426651231392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 782
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91883206fec37b10800000000000000
+      internalID: 1978152217340314013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_11
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 782
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74411d68bd59b860800000000000000
+      internalID: 7546165697321190527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_12
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 782
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f366a64779e803190800000000000000
+      internalID: -7984725358183553473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_13
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 678
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab95706d167ee050800000000000000
+      internalID: 5831728436035820460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_14
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 678
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee94514297f0ede60800000000000000
+      internalID: 7988839801972673006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_15
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 505
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5461a68d03c6bc0800000000000000
+      internalID: -3788599480474516023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_16
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 508
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98a097f0f0342460800000000000000
+      internalID: 7215946314458114202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_17
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 505
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f14f756e67ece6380800000000000000
+      internalID: -8976009997236833249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_18
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 454
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc55f5be8e774d140800000000000000
+      internalID: 4743548149792986573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_19
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 454
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6385efc66ccede4d0800000000000000
+      internalID: -3103564231212115914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_20
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 273
+        width: 209
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cc7c48bf196dbeb0800000000000000
+      internalID: -4702486850948006719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_21
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 273
+        width: 209
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04763072c23ed7360800000000000000
+      internalID: 7169135960616298304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_22
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 190
+        width: 209
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c0c423c023461e0800000000000000
+      internalID: -2205582889539859309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_23
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 190
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0fe44f239ca7b020800000000000000
+      internalID: 2357542678104960783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_24
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 190
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c3c19789fcf3870800000000000000
+      internalID: 8664872461857995913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_25
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 41
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc67051da1885ea0800000000000000
+      internalID: -5883810332777419554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_26
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 41
+        width: 216
+        height: 209
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bee4622f8f33d3030800000000000000
+      internalID: 3475991631707393771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrayTileBroken_27
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 34
+        width: 216
+        height: 216
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d100c6b91597e8f0800000000000000
+      internalID: -511276095010504235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
