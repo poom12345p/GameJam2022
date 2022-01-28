@@ -257,6 +257,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2067332682962872767, guid: f432600cc91c06d4aba6bbf15d90ea4f, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1107591327}
     - target: {fileID: 4606581277825294084, guid: f432600cc91c06d4aba6bbf15d90ea4f, type: 3}
       propertyPath: m_Name
       value: '[Singleton] SceneLoader'
