@@ -6,9 +6,13 @@ using System;
 
 public class BaseAnimator : MonoBehaviour
 {
+    protected Canvas MainCanvas { get => mainCanvas; set => mainCanvas = value; }
     public bool IsInterruptible { get => isInterruptible; set => isInterruptible = value; }
 
+    [Header("Canvas Settings")]
+    [SerializeField] private Canvas mainCanvas;
 
+    [Header("Animator Settings")]
     [SerializeField] protected Animator animator;
     [SerializeField] protected AnimationClip inClip;
     [SerializeField] protected AnimationClip outClip;
@@ -16,19 +20,24 @@ public class BaseAnimator : MonoBehaviour
 
     [ReadOnly] protected bool isPlaying;
 
-    public void PlayInClip(Action _onComplete = null)
+    private void Awake()
     {
-        if (isInterruptible && isPlaying) return;
-        StartCoroutine(iePlayInClip(_onComplete));
+        if (mainCanvas == null) mainCanvas = GetComponentInChildren<Canvas>();
     }
 
-    public void PlayOutClip(Action _onComplete = null)
+    public virtual void Show(Action _onComplete = null)
     {
         if (isInterruptible && isPlaying) return;
-        StartCoroutine(iePlayOutClip(_onComplete));
+        StartCoroutine(ieShow(_onComplete));
     }
 
-    public IEnumerator iePlayInClip(Action _onComplete = null)
+    public virtual void Hide(Action _onComplete = null)
+    {
+        if (isInterruptible && isPlaying) return;
+        StartCoroutine(ieHide(_onComplete));
+    }
+
+    public virtual IEnumerator ieShow(Action _onComplete = null)
     {
         isPlaying = true;
         animator.SetTrigger("in");
@@ -37,7 +46,7 @@ public class BaseAnimator : MonoBehaviour
         _onComplete?.Invoke();
     }
 
-    public IEnumerator iePlayOutClip(Action _onComplete = null)
+    public virtual IEnumerator ieHide(Action _onComplete = null)
     {
         isPlaying = true;
         animator.SetTrigger("out");

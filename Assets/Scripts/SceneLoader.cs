@@ -4,12 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 
-public class SceneLoader : BaseAnimator
+public class SceneLoader : Singleton<SceneLoader>
 {
+    [SerializeField] TransitionUI transitionUI;
+
     private void Awake()
     {
-        if (FindObjectOfType<SceneLoader>() != this) Destroy(this.gameObject);
-        DontDestroyOnLoad(this.gameObject);
+        base.Awake();
     }
 
     private void Update()
@@ -31,9 +32,9 @@ public class SceneLoader : BaseAnimator
 
     public IEnumerator ieLoadScene(int _index, Action _onComplete = null)
     {
-        yield return iePlayInClip();
+        yield return transitionUI.ieFadeIn();
         SceneManager.LoadScene(_index);
-        yield return iePlayOutClip();
+        yield return transitionUI.ieFadeOut();
         _onComplete?.Invoke();
     }
 }
