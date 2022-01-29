@@ -10,6 +10,7 @@ public class StageManager : MonoBehaviour
 
     MapManager mapManager;
     List<BaseUnit> baseUnits=new List<BaseUnit>();
+    int moves = 0;
 
     private void OnValidate()
     {
@@ -24,9 +25,11 @@ public class StageManager : MonoBehaviour
         {
             var _unit = unitTiles.GetChild(i).gameObject.GetComponent<BaseUnit>();
             _unit.Init(mapManager);
+            if (_unit is PlayerUnit) SubscribePlayer((PlayerUnit)_unit);
             baseUnits.Add(_unit);
         }
         unitTiles.GetComponent<TilemapRenderer>().enabled = false;
+        inGameUI.SetMove(moves);
     }
 
     private void Update()
@@ -40,5 +43,14 @@ public class StageManager : MonoBehaviour
         {
             SceneLoader.Instance.ReloadScene();
         }
+    }
+
+    private void SubscribePlayer(PlayerUnit _unit)
+    {
+        _unit.OnMove += (_dir) =>
+        {
+            moves++;
+            inGameUI.SetMove(moves);
+        };
     }
 }
