@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerUnit : BaseUnit
 {
     [SerializeField]private float moveCD =0.25f;
