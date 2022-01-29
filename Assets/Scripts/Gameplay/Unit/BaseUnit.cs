@@ -42,8 +42,8 @@ public class BaseUnit : MonoBehaviour
         else
            Debug.LogError($"{gameObject.name} didn't place on floor tile,pls relocate this unit");
 
-        spriteBody = GetComponentInChildren<UnitSprite>();
-        spriteBody.Init(this);
+      //  spriteBody = GetComponentInChildren<UnitSprite>();
+       // spriteBody.Init(this);
         StartBiundInteracting();
     }
 
