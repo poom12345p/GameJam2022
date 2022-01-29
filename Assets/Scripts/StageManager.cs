@@ -56,7 +56,7 @@ public class StageManager : MonoBehaviour
     private void SubscribePlayer(PlayerUnit _unit)
     {
         player = _unit;
-        _unit.OnMove += () =>
+        _unit.OnMove += (_ft) =>
         {
             moves++;
             inGameUI.SetMove(moves);
