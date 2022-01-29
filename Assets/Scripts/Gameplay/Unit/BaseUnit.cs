@@ -14,12 +14,15 @@ public class BaseUnit : MonoBehaviour
 
     public UnitType Type;
     public Action<Vector2Int> OnMove;
+    public Action OnFinishedMove;
     MapManager mapManager;
     [ReadOnly,SerializeField] protected FloorTile myTile;
-    List<BaseUnit> attachedUnit= new List<BaseUnit>();
+    List<BaseUnit> boundedUnit= new List<BaseUnit>();
+    List<BaseUnit> effectedUnit = new List<BaseUnit>();
     protected bool isInit;
     private BaseUnit coreMoveUnit;
-    protected bool isInterracted;
+
+    //protected bool isInterracted;
     public virtual void Init(MapManager _map)
     {
         mapManager = _map;
@@ -35,45 +38,61 @@ public class BaseUnit : MonoBehaviour
         StartInteracting();
     }
     #region move
+
+    public bool TryPushDirection(Vector2Int _dir)
+    {
+        Debug.Log($"{gameObject.name} pushed {_dir}");
+        return TryMoveDirection(_dir, this);
+    }
     public void TryMoveDirection(int _h,int _v,BaseUnit _unit)
     {
         TryMoveDirection(new Vector2Int(_h, _v), _unit);
     }
 
-    public bool TryMoveDirection(Vector2Int _velocity, BaseUnit _unit)
+    public bool TryMoveDirection(Vector2Int _dir, BaseUnit _unit)
     {
-        if (coreMoveUnit) return true;
-        Debug.Log($"{gameObject.name} try move to {_velocity}");
-        coreMoveUnit = _unit;
-        bool isMoved = false;
-        if (TryMove(_velocity))
+
+        if (coreMoveUnit)
         {
-            CustomFor(attachedUnit, _u => _u.TryMoveDirection(_velocity, this));
-            isMoved = true;
+            Debug.Log($"{gameObject.name} already move by to {_unit}");
+            return true;
+        }
+        Debug.Log($"{gameObject.name} try move to {_dir}");
+        coreMoveUnit = _unit;
+        if (coreMoveUnit != this) _unit.OnFinishedMove += FinishedMove;
+        bool isMoved = false;
+        if (TryMoveTo(_dir)) { 
+            isMoved = true; 
+            CustomFor(effectedUnit, _u => _u.TryMoveDirection(_dir, this));
         }
         else
             UnBoundWith(_unit);
-        if (coreMoveUnit == this)
-            StartInteracting();
+
+        if(coreMoveUnit == this)
+        {
+            FinishedMove();
+        }
+
         return isMoved;
     }
-    protected bool TryMove( Vector2Int _velocity)
+    protected bool TryMoveTo(Vector2Int _dir)
     {
-        if (mapManager.TryGetFloorTile(myTile.Pos.x + _velocity.x, myTile.Pos.y + _velocity.y, out var _floor)){
+        if (mapManager.TryGetFloorTile(myTile.Pos.x + _dir.x, myTile.Pos.y + _dir.y, out var _floor))
+        {
             if (_floor.TryGetUnit(out var onUnit))
             {
-                if (onUnit.TryMoveDirection(_velocity, this))
+                Debug.Log($"{gameObject.name} movewith {_dir} but floor own by {onUnit}");
+                if (onUnit.TryMoveDirection(_dir, this))
                 {
-                    return MoveTo(_floor);
+                    return MoveTo(_floor); ;
                 }
-                else
-                   return false;
+
             }
             else
-                return MoveTo(_floor);
+                return MoveTo(_floor); ;
+
         }
         return false;
-
     }
     public bool CanMoveTo(Vector2Int _velocity)
     {
@@ -84,7 +103,7 @@ public class BaseUnit : MonoBehaviour
                 if (onUnit.CanMoveTo(_velocity))
                 {
                     Debug.Log($"{gameObject.name} found {onUnit.name}");
-                    if (!attachedUnit.Contains(onUnit)) onUnit.TryMoveDirection(_velocity, onUnit);
+                    if (!effectedUnit.Contains(onUnit)) onUnit.TryMoveDirection(_velocity, onUnit);
                     return true;
                 }
             }
@@ -95,6 +114,7 @@ public class BaseUnit : MonoBehaviour
     }
     protected bool MoveTo(FloorTile mapTile)
     {
+        Debug.Log($"{gameObject.name} move to {mapTile.Pos}");
         myTile.MoveOut(this);
         myTile = mapTile;
         myTile.UnitMoveIn(this);
@@ -102,18 +122,19 @@ public class BaseUnit : MonoBehaviour
         return true;
     }
 
+    public void FinishedMove()
+    {
+        OnFinishedMove?.Invoke();
+        OnFinishedMove = null;
+        coreMoveUnit = null;
+        StartInteracting();
+    }
     #endregion
     #region interaction
 
     public void StartInteracting()
     {
-        if (isInterracted) return;
-        isInterracted = true;
         InteractAdjacentTiles(InteractBoundTile);
-        attachedUnit.ForEach(_u => _u.StartInteracting());
-        coreMoveUnit = null;
-        isInterracted = false;
-        InteractAdjacentTiles(InteractPushTile);
     }
     public void InteractAdjacentTiles(Action<FloorTile> _interMethod)
     {
@@ -130,7 +151,7 @@ public class BaseUnit : MonoBehaviour
             _interMethod?.Invoke(_tile4);
         }
     }
-    #region hold
+    #region bond
     protected void InteractBoundTile(FloorTile _tile)
     {
         if(_tile.TryGetUnit(out var unit))
@@ -141,7 +162,7 @@ public class BaseUnit : MonoBehaviour
 
     protected void InteractBoundUnit(BaseUnit _unit)
     {
-       if (attachedUnit.Contains(_unit))
+       if (effectedUnit.Contains(_unit))
             return;
        if(_unit.Type != Type){
             Debug.Log($"{gameObject.name} hold {_unit.name}");
@@ -155,8 +176,8 @@ public class BaseUnit : MonoBehaviour
     }
     public void AddAttached(BaseUnit _unit)
     {
-        if (!attachedUnit.Contains(_unit))
-            attachedUnit.Add(_unit);
+        if (!effectedUnit.Contains(_unit))
+            effectedUnit.Add(_unit);
     }
 
     public void UnBoundWith(BaseUnit _unit)
@@ -168,22 +189,49 @@ public class BaseUnit : MonoBehaviour
     }
     public void RemoveAttached(BaseUnit _unit)
     {
-        if (attachedUnit.Contains(_unit))
-            attachedUnit.Remove(_unit);
+        if (effectedUnit.Contains(_unit))
+            effectedUnit.Remove(_unit);
     }
     #endregion
     #region push
-    protected void InteractPushTile(FloorTile _tile)
+
+    protected bool TryGetPushedMove(out Vector2Int _dir)
     {
+        _dir = Vector2Int.zero;
+        if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x + 1, myTile.Pos.y), out var _tile1) && TryInteractPushTile(_tile1,out _dir))
+        {
+            return true;
+        }
+        if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x - 1, myTile.Pos.y), out var _tile2) && TryInteractPushTile(_tile2, out _dir))
+        {
+            return true;
+        }
+        if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x, myTile.Pos.y + 1), out var _tile3) && TryInteractPushTile(_tile3, out _dir))
+        {
+            return true;
+        }
+        if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x, myTile.Pos.y - 1), out var _tile4) && TryInteractPushTile(_tile4, out _dir))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    
+    protected bool TryInteractPushTile(FloorTile _tile,out Vector2Int _dir)
+    {
+        _dir = Vector2Int.zero;
         if (_tile.TryGetUnit(out var unit))
         {
-            InteractPushUnit(unit);
+            return TryInteractPushUnit(unit,out _dir);
         }
+        return false;
     }
-    protected void InteractPushUnit(BaseUnit _unit)
+    protected bool TryInteractPushUnit(BaseUnit _unit, out Vector2Int _dir)
     {
-        if (attachedUnit.Contains(_unit))
-            return;
+        _dir = Vector2Int.zero;
+        if (effectedUnit.Contains(_unit))
+            return false;
         if (_unit.Type == Type)
         {
             var dir = _unit.GetFloor().Pos - myTile.Pos;
@@ -196,9 +244,11 @@ public class BaseUnit : MonoBehaviour
             else
             {
                 Debug.Log($"{gameObject.name} is knocked back by{_unit.name} with {dir}");
-                TryMoveDirection(-dir, this);
+                _dir = -dir;
+                return true;
             }
         }
+        return false;
     }
     #endregion
     #endregion
