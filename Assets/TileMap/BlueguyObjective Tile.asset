@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BlueguyObjective Tile
   m_EditorClassIdentifier: 
   m_DefaultSprite: {fileID: 21300000, guid: 1b406777c25c1c04c89d894075a75805, type: 3}
-  m_DefaultGameObject: {fileID: 1836786127437461156, guid: 3879e9779ba803f448c34958b0eba209, type: 3}
+  m_DefaultGameObject: {fileID: 6152799452146176025, guid: 695958d5f457e074db5e5845e88729bf, type: 3}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0

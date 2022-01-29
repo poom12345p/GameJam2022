@@ -19,7 +19,7 @@ public class BaseUnit : MonoBehaviour
     MapManager mapManager;
 
     [ReadOnly,SerializeField] protected FloorTile myTile;
-    [SerializeField] protected float moveCD = 0.2f;
+    [SerializeField] private float moveCD = 0.2f;
 
     List<BaseUnit> boundedUnit = new List<BaseUnit>();
     protected bool isInit;
@@ -28,6 +28,7 @@ public class BaseUnit : MonoBehaviour
     bool isMoving=false;
     protected UnitSprite spriteBody;
     public List<BaseUnit> BoundedUnit { get => boundedUnit; }
+    public float MoveCD { get => moveCD; }
 
     //protected bool isInterracted;
 
@@ -43,8 +44,9 @@ public class BaseUnit : MonoBehaviour
         else
            Debug.LogError($"{gameObject.name} didn't place on floor tile,pls relocate this unit");
 
-      //  spriteBody = GetComponentInChildren<UnitSprite>();
-       // spriteBody.Init(this);
+        spriteBody = GetComponentInChildren<UnitSprite>();
+        if(spriteBody)
+            spriteBody.Init(this);
         StartBiundInteracting();
     }
 
