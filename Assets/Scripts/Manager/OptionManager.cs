@@ -9,4 +9,15 @@ public class OptionManager : Singleton<OptionManager>
 
     [SerializeField, Range(0, 1)] float bgmVolume = 1f;
     [SerializeField, Range(0, 1)] float sfxVolume = 1f;
+
+    public void UpdateBGMVolume(float _volume)
+    {
+        bgmVolume = _volume;
+        SoundManager.Instance.BgmAudioSource.volume = bgmVolume;
+    }
+
+    public void UpdateSFXVolume(float _volume)
+    {
+        sfxVolume = _volume;
+    }
 }

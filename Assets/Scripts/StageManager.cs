@@ -6,6 +6,7 @@ using UnityEngine.Tilemaps;
 public class StageManager : MonoBehaviour
 {
     [SerializeField] InGameUI inGameUI;
+    [SerializeField] PauseUI pauseUI;
 
     MapManager mapManager;
     List<BaseUnit> baseUnits=new List<BaseUnit>();
@@ -26,5 +27,13 @@ public class StageManager : MonoBehaviour
             baseUnits.Add(_unit);
         }
         unitTiles.GetComponent<TilemapRenderer>().enabled = false;
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseUI.Show();
+        }
     }
 }

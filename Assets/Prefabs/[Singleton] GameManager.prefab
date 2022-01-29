@@ -43,3 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f0a63573cb42d649a302bbc531f910c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgmClip: {fileID: 8300000, guid: 4aab371cdeaf3ac4e93495fa66bdd672, type: 3}

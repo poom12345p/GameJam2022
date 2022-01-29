@@ -19,6 +19,7 @@ public class BaseUIAnimator : MonoBehaviour
     [SerializeField] protected bool isInterruptible = false;
 
     [ReadOnly] protected bool isPlaying;
+    [ReadOnly] protected bool isShow;
 
     private void Awake()
     {
@@ -28,19 +29,20 @@ public class BaseUIAnimator : MonoBehaviour
 
     public virtual void Show(Action _onComplete = null)
     {
-        if (isInterruptible && isPlaying) return;
+        if (!isInterruptible && isPlaying) return;
         StartCoroutine(ieShow(_onComplete));
     }
 
     public virtual void Hide(Action _onComplete = null)
     {
-        if (isInterruptible && isPlaying) return;
+        if (!isInterruptible && isPlaying) return;
         StartCoroutine(ieHide(_onComplete));
     }
 
     public virtual IEnumerator ieShow(Action _onComplete = null)
     {
         isPlaying = true;
+        isShow = true;
         animator.SetTrigger("in");
         if (inClip != null) yield return new WaitForSeconds(inClip.length);
         isPlaying = false;
@@ -53,6 +55,7 @@ public class BaseUIAnimator : MonoBehaviour
         animator.SetTrigger("out");
         if (outClip != null) yield return new WaitForSeconds(outClip.length);
         isPlaying = false;
+        isShow = false;
         _onComplete?.Invoke();
     }
 }

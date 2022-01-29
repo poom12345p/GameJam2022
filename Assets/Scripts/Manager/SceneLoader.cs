@@ -6,11 +6,23 @@ using System;
 
 public class SceneLoader : Singleton<SceneLoader>
 {
+    public TransitionUI TransitionUI { get => transitionUI; set => transitionUI = value; }
+
     [SerializeField] TransitionUI transitionUI;
 
     private void Awake()
     {
         base.Awake();
+    }
+
+    public void LoadMenuScene()
+    {
+        StartCoroutine(ieLoadScene(0));
+    }
+
+    public void LoadLevelSelectScene()
+    {
+        StartCoroutine(ieLoadScene(1));
     }
 
     public void LoadScene(int _index)

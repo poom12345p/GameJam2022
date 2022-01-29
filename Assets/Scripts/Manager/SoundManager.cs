@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class SoundManager : Singleton<SoundManager>
 {
+    public AudioSource BgmAudioSource { get => bgmAudioSource; set => bgmAudioSource = value; }
+
     [SerializeField] AudioSource bgmAudioSource;
 
     Queue<AudioSource> sfxPool = new Queue<AudioSource>();
 
+
     private void Awake()
     {
+        base.Awake();
         if(bgmAudioSource == null) bgmAudioSource = this.gameObject.AddComponent<AudioSource>();
     }
 

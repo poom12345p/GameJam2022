@@ -8,8 +8,11 @@ public class GameManager : Singleton<GameManager>
 
     private int unlockedLevel = 1;
 
+    [SerializeField] AudioClip bgmClip;
+
     private void Awake()
     {
         base.Awake();
+        SoundManager.Instance.BgmPlay(bgmClip);
     }
 }
