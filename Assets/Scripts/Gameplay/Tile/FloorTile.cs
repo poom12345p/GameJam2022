@@ -6,7 +6,7 @@ public class FloorTile : MapTile
 {
     [ReadOnly]public BaseUnit UnitOnTile;
     
-    public bool UnitMoveIn(BaseUnit _unit)
+    public virtual bool UnitMoveIn(BaseUnit _unit)
     {
         if (UnitOnTile)
             return false;

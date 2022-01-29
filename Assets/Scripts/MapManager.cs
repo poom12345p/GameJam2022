@@ -8,11 +8,15 @@ public class MapManager : MonoBehaviour
 {
     
     [SerializeField]Transform mapTiles;
+    StageManager stageManager;
     Dictionary<int, Dictionary<int, MapTile>> tilesData;
 
-    public void Init()
+    public StageManager StageManager { get => stageManager; }
+
+    public void Init(StageManager _stage)
     {
-        mapTiles = GameObject.FindGameObjectWithTag("MapTiles").transform;
+        stageManager = _stage;
+       mapTiles = GameObject.FindGameObjectWithTag("MapTiles").transform;
         tilesData = new Dictionary<int, Dictionary<int, MapTile>>();
         for (int i = 0; i < mapTiles.childCount; i++){
             AddTilessToDict(mapTiles.GetChild(i).GetComponent<MapTile>());
@@ -22,7 +26,7 @@ public class MapManager : MonoBehaviour
     public void AddTilessToDict(MapTile tile)
     {
         if(!tile)Debug.Log($"tile null");
-        tile.Init();
+        tile.Init(this);
         if (!tilesData.ContainsKey(tile.Pos.x))
             tilesData.Add(tile.Pos.x, new Dictionary<int, MapTile>());
 
