@@ -15,7 +15,7 @@ public class BaseUnit : MonoBehaviour
     public UnitType Type;
     public Action<Vector2Int> OnMove;
     MapManager mapManager;
-    [ReadOnly] [SerializeField] FloorTile myTile;
+    [ReadOnly,SerializeField] protected FloorTile myTile;
     List<BaseUnit> attachedUnit= new List<BaseUnit>();
     protected bool isInit;
     private BaseUnit coreMoveUnit;
