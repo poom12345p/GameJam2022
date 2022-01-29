@@ -11,7 +11,7 @@ public class GoalTile : FloorTile
             if (_unit is PlayerUnit)
             {
                 var player = (PlayerUnit)_unit;
-                player.OnFinishedMove += ()=>mapManager.StageManager.CheckClearCondition(player);
+                player.OnFinishedAllMoveState += ()=>mapManager.StageManager.CheckClearCondition(player);
             }
             return true;
         }

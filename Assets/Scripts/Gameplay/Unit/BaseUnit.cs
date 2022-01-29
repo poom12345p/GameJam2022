@@ -15,6 +15,7 @@ public class BaseUnit : MonoBehaviour
     public UnitType Type;
     public Action<FloorTile> OnMove;
     public Action OnFinishedMove;
+    public Action OnFinishedAllMoveState;
     MapManager mapManager;
 
     [ReadOnly,SerializeField] protected FloorTile myTile;
@@ -146,6 +147,8 @@ public class BaseUnit : MonoBehaviour
         OnFinishedMove = null;
         coreMoveUnit = null;
         StartBiundInteracting();
+        OnFinishedAllMoveState?.Invoke();
+        OnFinishedAllMoveState = null;
         //InteractAdjacentTiles(TryInteractPushTile);
     }
     #endregion
