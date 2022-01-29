@@ -7,8 +7,11 @@ using System;
 public class SceneLoader : Singleton<SceneLoader>
 {
     public TransitionUI TransitionUI { get => transitionUI; set => transitionUI = value; }
+    public bool IsLoading { get => isLoading; set => isLoading = value; }
 
     [SerializeField] TransitionUI transitionUI;
+
+    bool isLoading;
 
     private void Awake()
     {
@@ -17,24 +20,32 @@ public class SceneLoader : Singleton<SceneLoader>
 
     public void LoadMenuScene()
     {
-        StartCoroutine(ieLoadScene(0));
+        LoadScene(0);
     }
 
     public void LoadLevelSelectScene()
     {
-        StartCoroutine(ieLoadScene(1));
+        LoadScene(1);
+    }
+
+    public void ReloadScene()
+    {
+        LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadScene(int _index)
     {
+        if (isLoading) return;
         StartCoroutine(ieLoadScene(_index));
     }
 
     public IEnumerator ieLoadScene(int _index, Action _onComplete = null)
     {
+        isLoading = true;
         yield return transitionUI.ieFadeIn();
         SceneManager.LoadScene(_index);
         yield return transitionUI.ieFadeOut();
+        isLoading = false;
         _onComplete?.Invoke();
     }
 }
