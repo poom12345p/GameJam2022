@@ -16,11 +16,12 @@ public class BaseUnit : MonoBehaviour
     public Action<FloorTile> OnMove;
     public Action OnFinishedMove;
     public Action OnFinishedAllMoveState;
+    public Action<BaseUnit>   OnBind;
+    public Action<BaseUnit>  OnUnBind;
     MapManager mapManager;
 
-    [ReadOnly,SerializeField] protected FloorTile myTile;
+    [ReadOnly, SerializeField] private FloorTile myTile;
     [SerializeField] private float moveCD = 0.2f;
-
     List<BaseUnit> boundedUnit = new List<BaseUnit>();
     protected bool isInit;
     private BaseUnit coreMoveUnit;
@@ -29,6 +30,7 @@ public class BaseUnit : MonoBehaviour
     protected UnitSprite spriteBody;
     public List<BaseUnit> BoundedUnit { get => boundedUnit; }
     public float MoveCD { get => moveCD; }
+    public FloorTile MyTile { get => myTile; }
 
     //protected bool isInterracted;
 
@@ -91,7 +93,7 @@ public class BaseUnit : MonoBehaviour
             CustomFor(boundedUnit, _u => _u.TryMoveDirection(_dir, this));
         }
         else
-            UnBoundWith(_unit);
+            UnBindWith(_unit);
         if(coreMoveUnit == this) FinishedMove();
         return isMoving;
     }
@@ -188,30 +190,35 @@ public class BaseUnit : MonoBehaviour
        if (boundedUnit.Contains(_unit))
             return;
        if(_unit.Type != Type){
-            Debug.Log($"{gameObject.name} bind {_unit.name}");
-            BiundWith(_unit);
+            BindWith(_unit);
        }
     }
-    public void BiundWith(BaseUnit _unit)
+    public void BindWith(BaseUnit _unit)
     {
+        Debug.Log($"{gameObject.name} bind {_unit.name}");
         AddAttached(_unit);
         _unit.AddAttached(this);
     }
     public void AddAttached(BaseUnit _unit)
     {
+
         if (!boundedUnit.Contains(_unit))
+        {
+            OnBind?.Invoke(_unit);
             boundedUnit.Add(_unit);
+        }
     }
     public void UnBoundWithAll()
     {
         Debug.Log($"{gameObject.name}  unbind All");
         CustomFor(boundedUnit, (_unit) => {
-            UnBoundWith(_unit);
+            UnBindWith(_unit);
         });
     }
-    public void UnBoundWith(BaseUnit _unit)
+    public void UnBindWith(BaseUnit _unit)
     {
         Debug.Log($"{gameObject.name} unbound {_unit.name}");
+       
         RemoveAttached(_unit);
         _unit.RemoveAttached(this);
         //StartBiundInteracting();
@@ -219,7 +226,10 @@ public class BaseUnit : MonoBehaviour
     public void RemoveAttached(BaseUnit _unit)
     {
         if (boundedUnit.Contains(_unit))
+        {
+            OnUnBind?.Invoke(_unit);
             boundedUnit.Remove(_unit);
+        }
     }
     #endregion
 

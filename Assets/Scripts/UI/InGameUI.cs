@@ -10,8 +10,9 @@ public class InGameUI : BaseUIAnimator
     [SerializeField] TextMeshProUGUI moveText;
     [SerializeField] TextMeshProUGUI trophyText;
 
-    private void Awake()
+    public override void Awake()
     {
+        base.Awake();
         SetLevel(SceneManager.GetActiveScene().buildIndex - 1);
     }
 

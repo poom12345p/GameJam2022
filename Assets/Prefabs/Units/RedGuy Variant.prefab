@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 037835adaff8ed24fbd89b3a731ae211, type: 3}
+    - target: {fileID: 4061260632937482249, guid: d716c062c53c3604f8e7609dcaa0ff11, type: 3}
+      propertyPath: linkParticlePrefab
+      value: 
+      objectReference: {fileID: 1102376530066909711, guid: 072ea87d85a133b41ad65f155487c6c7, type: 3}
     - target: {fileID: 5894250762367328339, guid: d716c062c53c3604f8e7609dcaa0ff11, type: 3}
       propertyPath: m_Name
       value: RedGuy

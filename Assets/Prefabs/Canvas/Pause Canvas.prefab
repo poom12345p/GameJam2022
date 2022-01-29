@@ -60,7 +60,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: -1
   m_SortingLayerID: 953973891
-  m_SortingOrder: 0
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!114 &4892574123327475664
 MonoBehaviour:
@@ -120,6 +120,7 @@ MonoBehaviour:
   outClip: {fileID: 7400000, guid: 723d42dcef5995c41ac34ebf327245a4, type: 2}
   isInterruptible: 0
   optionUI: {fileID: 0}
+  player: {fileID: 0}
 --- !u!95 &832493042401422583
 Animator:
   serializedVersion: 3

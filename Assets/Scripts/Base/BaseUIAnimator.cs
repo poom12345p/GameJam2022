@@ -23,7 +23,7 @@ public class BaseUIAnimator : MonoBehaviour
     [ReadOnly] private bool isPlaying;
     [ReadOnly] protected bool isShow;
 
-    private void Awake()
+    public virtual void Awake()
     {
         Debug.Log($"camera {Camera.main}");
         if (mainCanvas == null) mainCanvas = GetComponentInChildren<Canvas>();

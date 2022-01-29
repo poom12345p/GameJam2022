@@ -6,11 +6,13 @@ public class UnitSprite : MonoBehaviour
 {
     BaseUnit unit;
     Tween moveTween;
+    [SerializeField] LinkParticleControl linkParticleControl;
     public void Init(BaseUnit _unit)
     {
         unit = _unit;
         transform.SetParent(null);
         unit.OnMove += PrefromMove;
+        linkParticleControl.Init(_unit);
     }
 
     public void PrefromMove(FloorTile _tile)
