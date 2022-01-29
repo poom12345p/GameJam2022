@@ -31,6 +31,8 @@ public class BaseUnit : MonoBehaviour
         }
         else
            Debug.LogError($"{gameObject.name} didn't place on floor tile,pls relocate this unit");
+
+        StartInteracting();
     }
     #region move
     public void TryMoveDirection(int _h,int _v,BaseUnit _unit)
