@@ -5,11 +5,11 @@ using Unity.Collections;
 public class MapTile : MonoBehaviour
 {
     [ReadOnly] [SerializeField] protected Vector2Int  pos;
-    public bool ostacobstacle;
-
     public Vector2Int  Pos;
-    public void Init()
+    protected MapManager mapManager;
+    public void Init(MapManager _map)
     {
+        mapManager = _map;
         Pos.x = Mathf.FloorToInt(transform.position.x);
         Pos.y = Mathf.FloorToInt(transform.position.y);
     }

@@ -26,6 +26,8 @@ public class BaseUnit : MonoBehaviour
     protected float moveCDCount=0.0f;
     bool isMoving=false;
 
+    public List<BaseUnit> BoundedUnit { get => boundedUnit; }
+
     //protected bool isInterracted;
 
     public virtual void Init(MapManager _map)
@@ -215,30 +217,6 @@ public class BaseUnit : MonoBehaviour
     #endregion
 
     #region push
-
-    //protected bool TryGetPushedMove(out Vector2Int _dir)
-    //{
-    //    _dir = Vector2Int.zero;
-    //    if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x + 1, myTile.Pos.y), out var _tile1) && TryInteractPushTile(_tile1,out var _dir1))
-    //    {
-    //        _dir+=_dir1;
-    //    }
-    //    if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x - 1, myTile.Pos.y), out var _tile2) && TryInteractPushTile(_tile2, out var _dir2))
-    //    {
-    //        _dir += _dir2;
-    //    }
-    //    if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x, myTile.Pos.y + 1), out var _tile3) && TryInteractPushTile(_tile3, out var _dir3))
-    //    {
-    //        _dir += _dir3;
-    //    }
-    //    if (mapManager.TryGetFloorTile(new Vector2Int(myTile.Pos.x, myTile.Pos.y - 1), out var _tile4) && TryInteractPushTile(_tile4, out var _dir4))
-    //    {
-    //        _dir += _dir4;
-    //    }
-    //    return !_dir.Equals(Vector2Int.zero);
-    //}
-
-    
     protected void TryInteractPushTile(FloorTile _tile)
     {
        var _dir = Vector2Int.zero;
