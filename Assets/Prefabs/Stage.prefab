@@ -327,7 +327,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dcad0b67c46268f46ab36608b2e96585, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2367,7 +2367,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dcad0b67c46268f46ab36608b2e96585, type: 2}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2502,6 +2502,7 @@ MonoBehaviour:
   rewardUI: {fileID: 939813825991931957}
   minimumMoves: 0
   objective: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1001 &957706928011178366
 PrefabInstance:
   m_ObjectHideFlags: 0
