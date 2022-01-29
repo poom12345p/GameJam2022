@@ -15,6 +15,7 @@ public class PlayerUnit : BaseUnit
             inputCDCount -= Time.deltaTime;
          if(canMove && moveCDCount <= 0.0f && inputCDCount <= 0.0f)
         {
+            ResetInput();
             _vh = IsButtonRight() ? 1 : IsButtonLeft() ? -1 : 0;
            if(_vh == 0) _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
             if (_vv != 0 || _vh != 0){
@@ -23,7 +24,11 @@ public class PlayerUnit : BaseUnit
             }
         }
     }
-
+    public void ResetInput()
+    {
+        _vh = 0;
+        _vv = 0;
+    }
     bool IsButtonUp()
     {
         return Input.GetButton("Vertical") && Input.GetAxis("Vertical") > 0.0f;
