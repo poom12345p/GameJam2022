@@ -6,13 +6,14 @@ public class PlayerUnit : BaseUnit
     [SerializeField]private float inputCD =0.25f;
     private float inputCDCount=0.0f;
     int _vh=0, _vv = 0;
+    public bool canMove = true;
     protected override void Update()
     {
         base.Update();
         if (!isInit) return;
         if (inputCDCount > 0.0f)
             inputCDCount -= Time.deltaTime;
-        else{
+        else if(canMove){
             _vh = IsButtonRight() ? 1 : IsButtonLeft() ? -1 : 0;
             _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
             if (_vv != 0 || _vh != 0){
