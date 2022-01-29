@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: BlueGuy
+  m_Name: BlueGuyTile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 1383cdd356da8794c9fc0ed60d8ef81e, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 5b2e8de98bef7804db703783ca27e165, type: 3}
   m_DefaultGameObject: {fileID: 6321753862059651669, guid: d716c062c53c3604f8e7609dcaa0ff11, type: 3}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 1383cdd356da8794c9fc0ed60d8ef81e, type: 3}
+    - {fileID: 21300000, guid: 5b2e8de98bef7804db703783ca27e165, type: 3}
     m_GameObject: {fileID: 6321753862059651669, guid: d716c062c53c3604f8e7609dcaa0ff11, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
     m_Output: 0
-    m_ColliderType: 1
+    m_ColliderType: 0
     m_RandomTransform: 0
     m_Neighbors: 0200000002000000020000000200000002000000020000000200000002000000
     m_NeighborPositions:

@@ -6,11 +6,10 @@ public class FloorTile : MapTile
 {
     [ReadOnly]public BaseUnit UnitOnTile;
     
-    public bool TryMoveTo(BaseUnit _unit)
+    public bool UnitMoveIn(BaseUnit _unit)
     {
         if (UnitOnTile)
             return false;
-
         UnitOnTile = _unit;
             return true;
 
@@ -20,7 +19,6 @@ public class FloorTile : MapTile
     {
         if (UnitOnTile == _unit)
         {
-            Debug.Log($"{_unit} is move out of {gameObject.name}");
             UnitOnTile = null;
         }
     }

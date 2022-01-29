@@ -17,7 +17,7 @@ public class PlayerUnit : BaseUnit
             _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
             if (_vv != 0 || _vh != 0){
                 moveCDCount = moveCD;
-                MoveDirection(_vh, _vv);
+                TryMoveDirection(_vh, _vv,this);
             }
         }
     }
