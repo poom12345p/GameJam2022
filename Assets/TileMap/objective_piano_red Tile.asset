@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
   m_Name: objective_piano_red Tile
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 7aaca4f4d21a3c042857efa963ff58b4, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 723a31edd5fcd5d4a8f558f96b85d86e, type: 3}
   m_DefaultGameObject: {fileID: 335260305280760467, guid: 0b3ca8d4cea026241a2f4c19f4022397, type: 3}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 7aaca4f4d21a3c042857efa963ff58b4, type: 3}
+    - {fileID: 21300000, guid: 723a31edd5fcd5d4a8f558f96b85d86e, type: 3}
     m_GameObject: {fileID: 335260305280760467, guid: 0b3ca8d4cea026241a2f4c19f4022397, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
