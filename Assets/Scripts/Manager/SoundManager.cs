@@ -20,6 +20,7 @@ public class SoundManager : Singleton<SoundManager>
     public void BgmPlay(AudioClip _audioClip, float _volume = 0.5f)
     {
         bgmAudioSource.volume = _volume * OptionManager.Instance.SFXVolume;
+        bgmAudioSource.loop = true;
         bgmAudioSource.clip = _audioClip;
         bgmAudioSource.Play();
     }

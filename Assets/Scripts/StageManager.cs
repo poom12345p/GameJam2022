@@ -38,12 +38,12 @@ public class StageManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R)) SceneLoader.Instance.ReloadScene();
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !SceneLoader.Instance.IsLoading)
         {
             if (!pauseUI.IsShow) pauseUI.Show();
             else pauseUI.Hide();
         }
+        else if (Input.GetKeyDown(KeyCode.R) && !pauseUI.IsShow) SceneLoader.Instance.ReloadScene();
     }
 
     protected void FiltterUnit(BaseUnit _unit)
