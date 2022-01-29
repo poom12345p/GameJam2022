@@ -13,6 +13,6 @@ public class GameManager : Singleton<GameManager>
     private void Awake()
     {
         base.Awake();
-        SoundManager.Instance.BgmPlay(bgmClip);
+        if (SoundManager.Instance.BgmAudioSource.clip == null) SoundManager.Instance.BgmPlay(bgmClip);
     }
 }
