@@ -15,6 +15,11 @@ public class LevelButton : MonoBehaviour
     int level;
     bool isLock;
 
+    private void Awake()
+    {
+        medalImage.enabled = false;
+    }
+
     public void SetLevelText(int _level)
     {
         level = _level;
@@ -33,6 +38,11 @@ public class LevelButton : MonoBehaviour
         levelText.enabled = true;
         lockImage.enabled = false;
         isLock = false;
+    }
+
+    public void ShowMedal()
+    {
+        medalImage.enabled = true;
     }
 
     public void Btn_SelectLevel()

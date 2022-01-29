@@ -333,6 +333,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1107591327}
+    - target: {fileID: 8907991352455970843, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9208993519301483517, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -657,6 +661,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1107591327}
+    - target: {fileID: 7184579321328773347, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 7184579321328773350, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_Name
       value: Menu Canvas

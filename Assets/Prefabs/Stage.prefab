@@ -2501,6 +2501,7 @@ MonoBehaviour:
   pauseUI: {fileID: 1506598932434872490}
   minimumMoves: 0
   reward: {fileID: 939813825991931957}
+  objective: {fileID: 0}
 --- !u!1001 &957706928011178366
 PrefabInstance:
   m_ObjectHideFlags: 0
