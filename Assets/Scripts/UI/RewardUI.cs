@@ -31,4 +31,14 @@ public class RewardUI : BaseUIAnimator
     {
         moveText.text = "Move Count : " + _move;
     }
+
+    public void Retry_Btn()
+    {
+        SceneLoader.Instance.ReloadScene();
+    }
+
+    public void Next_Btn()
+    {
+        SceneLoader.Instance.LoadNextScene();
+    }
 }

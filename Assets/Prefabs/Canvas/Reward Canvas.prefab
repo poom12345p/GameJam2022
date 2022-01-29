@@ -388,7 +388,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7227432433104646516}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18180229314283851}
+        m_TargetAssemblyTypeName: RewardUI, Assembly-CSharp
+        m_MethodName: Next_Btn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5326365157231719693
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8740300117024142819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18180229314283851}
+        m_TargetAssemblyTypeName: RewardUI, Assembly-CSharp
+        m_MethodName: Retry_Btn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5747035890776792775
 GameObject:
   m_ObjectHideFlags: 0
