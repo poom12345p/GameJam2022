@@ -8,6 +8,7 @@ public class InGameUI : BaseUIAnimator
 {
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] TextMeshProUGUI moveText;
+    [SerializeField] TextMeshProUGUI trophyText;
 
     private void Awake()
     {
@@ -22,6 +23,11 @@ public class InGameUI : BaseUIAnimator
     public void SetMove(int _move)
     {
         moveText.text = "Move used : " + _move.ToString();
+    }
+
+    public void SetTrophy(int _minimum)
+    {
+        trophyText.text = "Trophy : " + _minimum.ToString();
     }
 
 }
