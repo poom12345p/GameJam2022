@@ -9,22 +9,20 @@ public class StageManager : MonoBehaviour
     [SerializeField] PauseUI pauseUI;
     [SerializeField] RewardUI rewardUI;
     [SerializeField] int minimumMoves = 0;
-    MapManager mapManager;
+    [SerializeField]MapManager mapManager;
     List<BaseUnit> baseUnits=new List<BaseUnit>();
     [ReadOnly][SerializeField]BaseUnit objective;
     [ReadOnly] [SerializeField]PlayerUnit player;
     int moves = 0;
     bool isClear=false;
 
-    private void OnValidate()
-    {
-        mapManager = gameObject.GetComponent<MapManager>() == null ? gameObject.AddComponent<MapManager>() : gameObject.GetComponent<MapManager>();
-    }
     private void Start()
     {
+        Debug.Log("start stage");
         mapManager.Init(this);
 
         var unitTiles = GameObject.FindGameObjectWithTag("UnitTiles").transform;
+        Debug.Log($"unit tile ={unitTiles} ");
         for (int i = 0; i < unitTiles.childCount; i++)
         {
             var _unit = unitTiles.GetChild(i).gameObject.GetComponent<BaseUnit>();

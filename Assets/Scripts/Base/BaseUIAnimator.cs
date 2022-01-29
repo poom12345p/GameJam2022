@@ -25,6 +25,7 @@ public class BaseUIAnimator : MonoBehaviour
 
     private void Awake()
     {
+        Debug.Log($"camera {Camera.main}");
         if (mainCanvas == null) mainCanvas = GetComponentInChildren<Canvas>();
         if (mainCanvas.worldCamera == null) mainCanvas.worldCamera = Camera.main;
     }

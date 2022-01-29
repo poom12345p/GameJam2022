@@ -7,7 +7,7 @@ using UnityEngine.Tilemaps;
 public class MapManager : MonoBehaviour
 {
     
-    [SerializeField]Transform mapTiles;
+    [SerializeField]Transform mapTiles = null;
     StageManager stageManager;
     Dictionary<int, Dictionary<int, MapTile>> tilesData;
 
@@ -16,12 +16,18 @@ public class MapManager : MonoBehaviour
     public void Init(StageManager _stage)
     {
         stageManager = _stage;
-       mapTiles = GameObject.FindGameObjectWithTag("MapTiles").transform;
+
+      
+        mapTiles = GameObject.FindGameObjectWithTag("MapTiles").transform;
         tilesData = new Dictionary<int, Dictionary<int, MapTile>>();
+
+        Debug.Log($"MapTiles tile ={ mapTiles} ");
+
         for (int i = 0; i < mapTiles.childCount; i++){
             AddTilessToDict(mapTiles.GetChild(i).GetComponent<MapTile>());
         }
     }
+
 
     public void AddTilessToDict(MapTile tile)
     {

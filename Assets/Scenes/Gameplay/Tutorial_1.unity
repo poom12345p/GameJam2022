@@ -184,6 +184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1445f7e94027204eabe523e74c45fa6, type: 3}
+--- !u!4 &1454644110 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1174623049709142230, guid: 54eb093426da2754a8798d2df7b9eba7, type: 3}
+  m_PrefabInstance: {fileID: 1963939226}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1963939226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5639,6 +5644,10 @@ PrefabInstance:
       propertyPath: minimumMoves
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1174623050415116346, guid: 54eb093426da2754a8798d2df7b9eba7, type: 3}
+      propertyPath: mapTiles
+      value: 
+      objectReference: {fileID: 1454644110}
     - target: {fileID: 2087089021388570381, guid: 54eb093426da2754a8798d2df7b9eba7, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
