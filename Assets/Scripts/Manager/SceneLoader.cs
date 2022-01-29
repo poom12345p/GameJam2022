@@ -33,6 +33,11 @@ public class SceneLoader : Singleton<SceneLoader>
         LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void LoadNextScene()
+    {
+        LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
     public void LoadScene(int _index)
     {
         if (isLoading) return;
@@ -50,7 +55,7 @@ public class SceneLoader : Singleton<SceneLoader>
         isLoading = true;
         if (transitionUI != null) yield return transitionUI.ieFadeIn();
         SceneManager.LoadScene(_index);
-        if (transitionUI != null)  yield return transitionUI.ieFadeOut();
+        if (transitionUI != null) yield return transitionUI.ieFadeOut();
         isLoading = false;
         _onComplete?.Invoke();
     }

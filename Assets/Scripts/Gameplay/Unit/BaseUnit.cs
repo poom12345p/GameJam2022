@@ -13,7 +13,7 @@ public class BaseUnit : MonoBehaviour
     }
 
     public UnitType Type;
-    public Action OnMove;
+    public Action<FloorTile> OnMove;
     public Action OnFinishedMove;
     MapManager mapManager;
 
@@ -25,7 +25,7 @@ public class BaseUnit : MonoBehaviour
     private BaseUnit coreMoveUnit;
     protected float moveCDCount=0.0f;
     bool isMoving=false;
-
+    protected UnitSprite spriteBody;
     public List<BaseUnit> BoundedUnit { get => boundedUnit; }
 
     //protected bool isInterracted;
@@ -42,6 +42,8 @@ public class BaseUnit : MonoBehaviour
         else
            Debug.LogError($"{gameObject.name} didn't place on floor tile,pls relocate this unit");
 
+        spriteBody = GetComponentInChildren<UnitSprite>();
+        spriteBody.Init(this);
         StartBiundInteracting();
     }
 
@@ -130,7 +132,7 @@ public class BaseUnit : MonoBehaviour
     protected bool MoveTo(FloorTile mapTile)
     {
         Debug.Log($"{gameObject.name} move to {mapTile.Pos}");
-        OnMove?.Invoke();
+        OnMove?.Invoke(mapTile);
         myTile.MoveOut(this);
         myTile = mapTile;
         myTile.UnitMoveIn(this);

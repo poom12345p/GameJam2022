@@ -55,7 +55,7 @@ public class StageManager : MonoBehaviour
     {
         player = _unit;
         pauseUI.player = player;
-        _unit.OnMove += () =>
+        _unit.OnMove += (_ft) =>
         {
             moves++;
             inGameUI.SetMove(moves);
