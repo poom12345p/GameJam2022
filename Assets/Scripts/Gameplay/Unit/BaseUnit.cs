@@ -25,6 +25,7 @@ public class BaseUnit : MonoBehaviour
     protected bool isInit;
     private BaseUnit coreMoveUnit;
     protected float moveCDCount=0.0f;
+    bool isMoving=false;
 
     //protected bool isInterracted;
 
@@ -50,6 +51,11 @@ public class BaseUnit : MonoBehaviour
         {
             moveCDCount -= Time.deltaTime;
         }
+
+        if(isMoving && moveCDCount <= 0.0f)
+        {
+            InteractAdjacentTiles(TryInteractPushTile);
+        }
     }
     #region move
 
@@ -71,16 +77,16 @@ public class BaseUnit : MonoBehaviour
         if (coreMoveUnit) return true;
         coreMoveUnit = _unit;
         if (coreMoveUnit != this) _unit.OnFinishedMove += FinishedMove;
-        bool isMoved = false;
-        if (TryMoveTo(_dir)) { 
-            isMoved = true;
+        isMoving = false;
+        if (TryMoveTo(_dir)) {
+            isMoving = true;
             moveCDCount = moveCD;
             CustomFor(effectedUnit, _u => _u.TryMoveDirection(_dir, this));
         }
         else
             UnBoundWith(_unit);
         if(coreMoveUnit == this) FinishedMove();
-        return isMoved;
+        return isMoving;
     }
     protected bool TryMoveTo(Vector2Int _dir)
     {
