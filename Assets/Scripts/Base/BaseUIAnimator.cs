@@ -23,7 +23,7 @@ public class BaseUIAnimator : MonoBehaviour
     [ReadOnly] private bool isPlaying;
     [ReadOnly] protected bool isShow;
 
-    private void Awake()
+    public virtual void Awake()
     {
         if (mainCanvas == null) mainCanvas = GetComponentInChildren<Canvas>();
         if (mainCanvas.worldCamera == null) mainCanvas.worldCamera = Camera.main;
