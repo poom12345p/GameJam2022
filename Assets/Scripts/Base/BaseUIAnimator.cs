@@ -6,8 +6,10 @@ using System;
 
 public class BaseUIAnimator : MonoBehaviour
 {
-    protected Canvas MainCanvas { get => mainCanvas; set => mainCanvas = value; }
+    public Canvas MainCanvas { get => mainCanvas; set => mainCanvas = value; }
     public bool IsInterruptible { get => isInterruptible; set => isInterruptible = value; }
+    public bool IsPlaying { get => isPlaying; set => isPlaying = value; }
+    public bool IsShow { get => isShow; set => isShow = value; }
 
     [Header("Canvas Settings")]
     [SerializeField] private Canvas mainCanvas;
@@ -18,7 +20,7 @@ public class BaseUIAnimator : MonoBehaviour
     [SerializeField] protected AnimationClip outClip;
     [SerializeField] protected bool isInterruptible = false;
 
-    [ReadOnly] protected bool isPlaying;
+    [ReadOnly] private bool isPlaying;
     [ReadOnly] protected bool isShow;
 
     private void Awake()

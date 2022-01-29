@@ -39,12 +39,28 @@ public class SceneLoader : Singleton<SceneLoader>
         StartCoroutine(ieLoadScene(_index));
     }
 
+    public void LoadScene(string _sceneName)
+    {
+        if (isLoading) return;
+        StartCoroutine(ieLoadScene(_sceneName));
+    }
+
     public IEnumerator ieLoadScene(int _index, Action _onComplete = null)
     {
         isLoading = true;
         if (transitionUI != null) yield return transitionUI.ieFadeIn();
         SceneManager.LoadScene(_index);
         if (transitionUI != null)  yield return transitionUI.ieFadeOut();
+        isLoading = false;
+        _onComplete?.Invoke();
+    }
+
+    public IEnumerator ieLoadScene(string _sceneName, Action _onComplete = null)
+    {
+        isLoading = true;
+        if (transitionUI != null) yield return transitionUI.ieFadeIn();
+        SceneManager.LoadScene(_sceneName);
+        if (transitionUI != null) yield return transitionUI.ieFadeOut();
         isLoading = false;
         _onComplete?.Invoke();
     }

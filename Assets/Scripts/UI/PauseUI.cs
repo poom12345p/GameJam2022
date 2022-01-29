@@ -7,15 +7,19 @@ public class PauseUI : BaseUIAnimator
 {
     [SerializeField] OptionUI optionUI;
 
+    public PlayerUnit player;
+
     public override void Show(Action _onComplete = null)
     {
         if (isShow) return;
+        if (player != null) player.canMove = false;
         base.Show(_onComplete);
     }
 
     public override void Hide(Action _onComplete = null)
     {
         if (!isShow) return;
+        if (player != null) player.canMove = true;
         base.Hide(_onComplete);
     }
 

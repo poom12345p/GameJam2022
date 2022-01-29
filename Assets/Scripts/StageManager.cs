@@ -38,13 +38,11 @@ public class StageManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.R)) SceneLoader.Instance.ReloadScene();
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            pauseUI.Show();
-        }
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneLoader.Instance.ReloadScene();
+            if (!pauseUI.IsShow) pauseUI.Show();
+            else pauseUI.Hide();
         }
     }
 
@@ -56,6 +54,7 @@ public class StageManager : MonoBehaviour
     private void SubscribePlayer(PlayerUnit _unit)
     {
         player = _unit;
+        pauseUI.player = player;
         _unit.OnMove += () =>
         {
             moves++;
@@ -79,6 +78,7 @@ public class StageManager : MonoBehaviour
     protected void Clear()
     {
         if (isClear) return;
+        player.canMove = false;
         rewardUI.Show();
         rewardUI.ShowReward(minimumMoves, moves);
         rewardUI.UpdateMoveText(moves);

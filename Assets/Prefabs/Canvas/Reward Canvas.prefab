@@ -955,7 +955,7 @@ MonoBehaviour:
   outClip: {fileID: 7400000, guid: 87dcea8cc8990884dbb3cd3127426dec, type: 2}
   isInterruptible: 0
   moveText: {fileID: 5067962479808910408}
-  trophy: {fileID: 0}
+  trophy: {fileID: 6374019408369412047}
 --- !u!95 &5699324578437213280
 Animator:
   serializedVersion: 3
