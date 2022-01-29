@@ -42,9 +42,9 @@ public class SceneLoader : Singleton<SceneLoader>
     public IEnumerator ieLoadScene(int _index, Action _onComplete = null)
     {
         isLoading = true;
-        yield return transitionUI.ieFadeIn();
+        if (transitionUI != null) yield return transitionUI.ieFadeIn();
         SceneManager.LoadScene(_index);
-        yield return transitionUI.ieFadeOut();
+        if (transitionUI != null)  yield return transitionUI.ieFadeOut();
         isLoading = false;
         _onComplete?.Invoke();
     }

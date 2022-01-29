@@ -479,9 +479,21 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1107591327}
+    - target: {fileID: 4370291092285439417, guid: f432600cc91c06d4aba6bbf15d90ea4f, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4606581277825294084, guid: f432600cc91c06d4aba6bbf15d90ea4f, type: 3}
       propertyPath: m_Name
       value: '[Singleton] SceneLoader'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450539511303046178, guid: f432600cc91c06d4aba6bbf15d90ea4f, type: 3}
+      propertyPath: m_Name
+      value: Transition Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450539511303046178, guid: f432600cc91c06d4aba6bbf15d90ea4f, type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f432600cc91c06d4aba6bbf15d90ea4f, type: 3}
