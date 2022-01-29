@@ -15,7 +15,7 @@ public class PlayerUnit : BaseUnit
             inputCDCount -= Time.deltaTime;
         else if(canMove){
             _vh = IsButtonRight() ? 1 : IsButtonLeft() ? -1 : 0;
-            _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
+           if(_vh == 0) _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
             if (_vv != 0 || _vh != 0){
                 inputCDCount = inputCD;
                 ResetMoveCD();
