@@ -21,11 +21,6 @@ MonoBehaviour:
     - {fileID: 21300000, guid: b721b9b8bf3199d4d8ce18de0101aaf7, type: 3}
     - {fileID: 21300000, guid: d6f636360dd6cbb48adb9a70e318f831, type: 3}
     - {fileID: 21300000, guid: ddaac2b65ecc26344b7cffd69bbd9aa3, type: 3}
-    - {fileID: 21300000, guid: bb8eeec82c724d346ae31576a83dbfae, type: 3}
-    - {fileID: 21300000, guid: 115b4d7e2b4b0ab4cb973c0c1ade16f4, type: 3}
-    - {fileID: 21300000, guid: 87a19d67683026048ac768dddb83a079, type: 3}
-    - {fileID: 21300000, guid: ac79af40b4fe31e42ab03e51a99d5455, type: 3}
-    - {fileID: 21300000, guid: b3ea6c860581a5047b8cdf882d1935c6, type: 3}
     m_GameObject: {fileID: 7465447162426982304, guid: f772e1b025f79a94d954b311de9982e6, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
