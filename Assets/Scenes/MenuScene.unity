@@ -495,6 +495,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 936978363115594955, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_Name
+      value: BG
+      objectReference: {fileID: 0}
     - target: {fileID: 5446510717790055091, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: optionUI
       value: 
