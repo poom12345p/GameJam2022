@@ -13,7 +13,7 @@ public class BaseUnit : MonoBehaviour
     }
 
     public UnitType Type;
-    public Action<Vector2Int> OnMove;
+    public Action OnMove;
     public Action OnFinishedMove;
     MapManager mapManager;
 
@@ -83,7 +83,6 @@ public class BaseUnit : MonoBehaviour
         if (TryMoveTo(_dir)) {
             isMoving = true;
             moveCDCount = moveCD;
-            OnMove?.Invoke(_dir);
             CustomFor(boundedUnit, _u => _u.TryMoveDirection(_dir, this));
         }
         else
@@ -131,6 +130,7 @@ public class BaseUnit : MonoBehaviour
     protected bool MoveTo(FloorTile mapTile)
     {
         Debug.Log($"{gameObject.name} move to {mapTile.Pos}");
+        OnMove?.Invoke();
         myTile.MoveOut(this);
         myTile = mapTile;
         myTile.UnitMoveIn(this);

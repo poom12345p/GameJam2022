@@ -12,6 +12,7 @@ public class StageManager : MonoBehaviour
     MapManager mapManager;
     List<BaseUnit> baseUnits=new List<BaseUnit>();
     [ReadOnly][SerializeField]BaseUnit objective;
+    [ReadOnly] [SerializeField]PlayerUnit player;
     int moves = 0;
     bool isClear=false;
 
@@ -54,7 +55,8 @@ public class StageManager : MonoBehaviour
     }
     private void SubscribePlayer(PlayerUnit _unit)
     {
-        _unit.OnMove += (_dir) =>
+        player = _unit;
+        _unit.OnMove += () =>
         {
             moves++;
             inGameUI.SetMove(moves);

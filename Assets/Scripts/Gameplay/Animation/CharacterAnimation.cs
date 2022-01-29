@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-public class UnityAnimation : MonoBehaviour
+public class CharacterAnimation : MonoBehaviour
 {
     // Start is called before the first frame update
     Tween scaleTween;
