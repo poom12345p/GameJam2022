@@ -41,7 +41,6 @@ public class StageManager : MonoBehaviour
         {
             pauseUI.Show();
         }
-
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneLoader.Instance.ReloadScene();
