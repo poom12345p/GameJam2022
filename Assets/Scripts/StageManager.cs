@@ -5,6 +5,8 @@ using UnityEngine.Tilemaps;
 
 public class StageManager : MonoBehaviour
 {
+    [SerializeField] InGameUI inGameUI;
+
     MapManager mapManager;
     List<BaseUnit> baseUnits=new List<BaseUnit>();
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class TransitionUI : BaseAnimator
+public class TransitionUI : BaseUIAnimator
 {
     public void FadeIn(Action _onComplete = null)
     {

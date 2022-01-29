@@ -13,18 +13,6 @@ public class SceneLoader : Singleton<SceneLoader>
         base.Awake();
     }
 
-    private void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-        //    LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //}
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-        //}
-    }
-
     public void LoadScene(int _index)
     {
         StartCoroutine(ieLoadScene(_index));

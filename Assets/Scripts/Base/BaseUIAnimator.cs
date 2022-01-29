@@ -4,7 +4,7 @@ using Unity.Collections;
 using UnityEngine;
 using System;
 
-public class BaseAnimator : MonoBehaviour
+public class BaseUIAnimator : MonoBehaviour
 {
     protected Canvas MainCanvas { get => mainCanvas; set => mainCanvas = value; }
     public bool IsInterruptible { get => isInterruptible; set => isInterruptible = value; }
@@ -23,6 +23,7 @@ public class BaseAnimator : MonoBehaviour
     private void Awake()
     {
         if (mainCanvas == null) mainCanvas = GetComponentInChildren<Canvas>();
+        if (mainCanvas.worldCamera == null) mainCanvas.worldCamera = Camera.main;
     }
 
     public virtual void Show(Action _onComplete = null)
