@@ -34,6 +34,7 @@ public class StageManager : MonoBehaviour
         }
         unitTiles.GetComponent<TilemapRenderer>().enabled = false;
         inGameUI.SetMove(moves);
+        inGameUI.SetTrophy(minimumMoves);
     }
 
     private void Update()

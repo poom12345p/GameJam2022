@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using UnityEngine.SceneManagement;
 
 public class RewardUI : BaseUIAnimator
 {
@@ -17,13 +18,21 @@ public class RewardUI : BaseUIAnimator
 
     public void ShowReward(int _minimum, int _move)
     {
-        if(_move <= _minimum)
+        if (_move <= _minimum) trophy.enabled = true;
+        else trophy.enabled = false;
+        UpdateSave(_minimum, _move);
+    }
+
+    public void UpdateSave(int _minimum, int _move)
+    {
+        var _currentScene = SceneManager.GetActiveScene();
+        if (_move < GameManager.Instance.GetInt(_currentScene.name))
         {
-            trophy.enabled = true;
+            GameManager.Instance.SetInt(_currentScene.name, _move);
         }
-        else
+        if (_currentScene.buildIndex > GameManager.Instance.GetUnlockedLevel())
         {
-            trophy.enabled = false;
+            GameManager.Instance.SetUnlockedLevel(_currentScene.buildIndex);
         }
     }
 
