@@ -17,14 +17,14 @@ public class SoundManager : Singleton<SoundManager>
         if(bgmAudioSource == null) bgmAudioSource = this.gameObject.AddComponent<AudioSource>();
     }
 
-    public void BgmPlay(AudioClip _audioClip, float _volume = 1f)
+    public void BgmPlay(AudioClip _audioClip, float _volume = 0.5f)
     {
         bgmAudioSource.volume = _volume * OptionManager.Instance.SFXVolume;
         bgmAudioSource.clip = _audioClip;
         bgmAudioSource.Play();
     }
 
-    public void SfxPlay(AudioClip _audioClip, float _volume = 1f)
+    public void SfxPlay(AudioClip _audioClip, float _volume = 0.5f)
     {
         AudioSource _audioSource;
         if (sfxPool.Count == 0) _audioSource = gameObject.AddComponent<AudioSource>();
