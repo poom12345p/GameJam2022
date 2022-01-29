@@ -7,8 +7,8 @@ public class StageManager : MonoBehaviour
 {
     [SerializeField] InGameUI inGameUI;
     [SerializeField] PauseUI pauseUI;
-    [SerializeField] int minimumMoves;
-    [SerializeField] RewardUI reward;
+    [SerializeField] RewardUI rewardUI;
+    [SerializeField] int minimumMoves = 0;
     MapManager mapManager;
     List<BaseUnit> baseUnits=new List<BaseUnit>();
     [ReadOnly][SerializeField]BaseUnit objective;
@@ -63,7 +63,6 @@ public class StageManager : MonoBehaviour
 
     public void CheckClearCondition(PlayerUnit _player)
     {
-        Debug.Log("Cheack Clear");
         if (objective)
         {
             if (_player.BoundedUnit.Contains(objective)) 
@@ -78,8 +77,9 @@ public class StageManager : MonoBehaviour
     protected void Clear()
     {
         if (isClear) return;
-        Debug.Log("Win Clear");
-        reward.Show();
+        rewardUI.Show();
+        rewardUI.ShowReward(minimumMoves, moves);
+        rewardUI.UpdateMoveText(moves);
         isClear = true;
     }
 }
