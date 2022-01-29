@@ -97,3 +97,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 1
   myTile: {fileID: 0}
+  moveCD: 0.2

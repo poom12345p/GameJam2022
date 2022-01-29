@@ -15,6 +15,7 @@ public class LevelSelectUI : BaseUIAnimator
         {
             var _button = Instantiate(buttonPrefab, buttonPrefab.transform.parent);
             _button.SetLevelText(i + 1);
+            _button.SceneName = scenesList[i].name;
             _button.gameObject.SetActive(true);
             if (_button.transform.GetSiblingIndex() <= GameManager.Instance.UnlockedLevel) _button.Unlock();
             else _button.Lock();

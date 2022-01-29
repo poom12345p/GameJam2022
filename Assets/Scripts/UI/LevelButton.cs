@@ -6,13 +6,15 @@ using TMPro;
 
 public class LevelButton : MonoBehaviour
 {
+    public string SceneName { get => sceneName; set => sceneName = value; }
+
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] Image medalImage;
     [SerializeField] Image lockImage;
     [SerializeField] AudioClip clickClip;
     [SerializeField] AudioClip lockClip;
 
-    int level;
+    string sceneName;
     bool isLock;
 
     private void Awake()
@@ -22,7 +24,6 @@ public class LevelButton : MonoBehaviour
 
     public void SetLevelText(int _level)
     {
-        level = _level;
         levelText.text = _level.ToString();
     }
 
@@ -49,7 +50,7 @@ public class LevelButton : MonoBehaviour
     {
         if(!isLock)
         {
-            SceneLoader.Instance.LoadScene(level + 1);
+            SceneLoader.Instance.LoadScene(sceneName);
             SoundManager.Instance.SfxPlay(clickClip);
         }
         else

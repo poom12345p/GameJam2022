@@ -2499,8 +2499,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameUI: {fileID: 1019418941926706228}
   pauseUI: {fileID: 1506598932434872490}
+  rewardUI: {fileID: 939813825991931957}
   minimumMoves: 0
-  reward: {fileID: 939813825991931957}
   objective: {fileID: 0}
 --- !u!1001 &957706928011178366
 PrefabInstance:
@@ -2596,6 +2596,10 @@ PrefabInstance:
     - target: {fileID: 7908806352690452245, guid: 4d99f4d7c96ee3b4193c7dcd1d16d29a, type: 3}
       propertyPath: m_Name
       value: Reward Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8336442460409015723, guid: 4d99f4d7c96ee3b4193c7dcd1d16d29a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d99f4d7c96ee3b4193c7dcd1d16d29a, type: 3}
@@ -2708,6 +2712,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 91880746167930612, guid: 17f7cd8749d040d44ba21a1006b57372, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 620160624668679900, guid: 17f7cd8749d040d44ba21a1006b57372, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3855726932255989041, guid: 17f7cd8749d040d44ba21a1006b57372, type: 3}
@@ -2854,6 +2862,10 @@ PrefabInstance:
     - target: {fileID: 6951361801126338294, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_Name
       value: Option Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907991352455970843, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9208993519301483517, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_AnchorMax.x

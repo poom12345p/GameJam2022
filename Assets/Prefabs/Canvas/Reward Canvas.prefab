@@ -388,7 +388,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7227432433104646516}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18180229314283851}
+        m_TargetAssemblyTypeName: RewardUI, Assembly-CSharp
+        m_MethodName: Next_Btn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5326365157231719693
 GameObject:
   m_ObjectHideFlags: 0
@@ -584,7 +596,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8740300117024142819}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 18180229314283851}
+        m_TargetAssemblyTypeName: RewardUI, Assembly-CSharp
+        m_MethodName: Retry_Btn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5747035890776792775
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,7 +979,7 @@ MonoBehaviour:
   outClip: {fileID: 7400000, guid: 87dcea8cc8990884dbb3cd3127426dec, type: 2}
   isInterruptible: 0
   moveText: {fileID: 5067962479808910408}
-  trophy: {fileID: 0}
+  trophy: {fileID: 6374019408369412047}
 --- !u!95 &5699324578437213280
 Animator:
   serializedVersion: 3
