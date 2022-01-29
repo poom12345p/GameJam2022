@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: objective_piano_red Tile
+  m_Name: PianoBlue
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: 723a31edd5fcd5d4a8f558f96b85d86e, type: 3}
-  m_DefaultGameObject: {fileID: 335260305280760467, guid: 0b3ca8d4cea026241a2f4c19f4022397, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 68f498fb915a552408cfc336fa988e13, type: 3}
+  m_DefaultGameObject: {fileID: 9107933450772967632, guid: c542946cf08696d48b07571052373d6e, type: 3}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 21300000, guid: 723a31edd5fcd5d4a8f558f96b85d86e, type: 3}
-    m_GameObject: {fileID: 335260305280760467, guid: 0b3ca8d4cea026241a2f4c19f4022397, type: 3}
+    - {fileID: 21300000, guid: 68f498fb915a552408cfc336fa988e13, type: 3}
+    m_GameObject: {fileID: 9107933450772967632, guid: c542946cf08696d48b07571052373d6e, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5

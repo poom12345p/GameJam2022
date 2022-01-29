@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 30044679153944665}
   - component: {fileID: 69936742748543189}
   - component: {fileID: 6527717964382304144}
+  - component: {fileID: 2344752428363601465}
   m_Layer: 0
   m_Name: Player_BlueGuy
   m_TagString: Untagged
@@ -102,6 +103,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2344752428363601465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 116997873803128071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eaf7373680218445afedf9d5bc499c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4036667353860804489
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d1514134bc4fbd41bb739b1b9a49231, type: 3}
-  m_Name: objective_saxophone_red Tile
+  m_Name: SaxBlue
   m_EditorClassIdentifier: 
-  m_DefaultSprite: {fileID: 21300000, guid: c3f071a002dbd5940a46d43af4d1b321, type: 3}
-  m_DefaultGameObject: {fileID: 9027658483902271501, guid: 7babe320daa9bf441a9de52b235b74d6, type: 3}
+  m_DefaultSprite: {fileID: 21300000, guid: 4d9aee350f2eeb344b3cf386facac93c, type: 3}
+  m_DefaultGameObject: {fileID: 6037973671629138385, guid: 070d63d7ec87d664595b57c9a1034e1b, type: 3}
   m_DefaultColliderType: 0
   m_TilingRules:
   - m_Id: 0
     m_Sprites:
-    - {fileID: 21300000, guid: c3f071a002dbd5940a46d43af4d1b321, type: 3}
-    m_GameObject: {fileID: 9027658483902271501, guid: 7babe320daa9bf441a9de52b235b74d6, type: 3}
+    - {fileID: 21300000, guid: 4d9aee350f2eeb344b3cf386facac93c, type: 3}
+    m_GameObject: {fileID: 6037973671629138385, guid: 070d63d7ec87d664595b57c9a1034e1b, type: 3}
     m_MinAnimationSpeed: 1
     m_MaxAnimationSpeed: 1
     m_PerlinScale: 0.5
