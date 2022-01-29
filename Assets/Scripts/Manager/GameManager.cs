@@ -13,6 +13,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Awake()
     {
+        PlayerPrefs.DeleteAll();
         base.Awake();
         if (SoundManager.Instance.BgmAudioSource.clip == null) SoundManager.Instance.BgmPlay(bgmClip);
         if (GetUnlockedLevel() < 1) SetUnlockedLevel(1);

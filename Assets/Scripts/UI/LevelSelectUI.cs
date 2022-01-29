@@ -1,13 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
 
 public class LevelSelectUI : BaseUIAnimator
 {
     [Header("LevelSelect Settings")]
     [SerializeField] LevelButton buttonPrefab;
-    [SerializeField] List<SceneAsset> scenesList;
+    [SerializeField] List<string> scenesList;
 
     private void Awake()
     {
@@ -15,7 +14,7 @@ public class LevelSelectUI : BaseUIAnimator
         {
             var _button = Instantiate(buttonPrefab, buttonPrefab.transform.parent);
             _button.SetLevelText(i + 1);
-            _button.SceneName = scenesList[i].name;
+            _button.SceneName = scenesList[i];
             _button.gameObject.SetActive(true);
             if (_button.transform.GetSiblingIndex() <= GameManager.Instance.UnlockedLevel) _button.Unlock();
             else _button.Lock();
