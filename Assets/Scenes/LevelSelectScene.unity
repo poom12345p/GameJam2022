@@ -279,6 +279,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1120981286701796241, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4831730260025188587, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: m_ConstraintCount
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4831730260063424010, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -371,29 +379,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelSelect Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7065121934508840054, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
-      propertyPath: m_Type
-      value: 0
+    - target: {fileID: 5539921320745926825, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7065121934508840054, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ac7ef8aaab4caaf42841ac049157f3a2, type: 3}
-    - target: {fileID: 7220429185071458599, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
-      propertyPath: m_margin.w
-      value: 5
+    - target: {fileID: 5539921320745926825, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7220429185071458599, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
-      propertyPath: m_margin.x
-      value: 0
+    - target: {fileID: 5539921320745926825, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 150
       objectReference: {fileID: 0}
-    - target: {fileID: 7220429185071458599, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 1024
-      objectReference: {fileID: 0}
-    - target: {fileID: 8115439106583653765, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+    - target: {fileID: 5539921320745926825, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 60
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539921320745926825, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 450
+      objectReference: {fileID: 0}
+    - target: {fileID: 5539921320745926825, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c30369c05f583449b6b894f83f09650, type: 3}

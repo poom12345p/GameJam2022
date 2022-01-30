@@ -52,6 +52,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1744007471874401893}
     m_Modifications:
+    - target: {fileID: 2379168691876166312, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379168691876166312, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2379168691876166312, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2725864208011582705, guid: e0b487625eb908746a600de18c2b847b, type: 3}
       propertyPath: m_Name
       value: Transition Canvas
@@ -138,6 +150,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4148541575410915378, guid: e0b487625eb908746a600de18c2b847b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214088276608460106, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1610.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214088276608460106, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 906.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643465685459385070, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_Color.b
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643465685459385070, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_Color.g
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6643465685459385070, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6773749348800852332, guid: e0b487625eb908746a600de18c2b847b, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
