@@ -531,9 +531,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_text
-      value: 'Sometimes snap apn push can be
-
-        rebound with more than 2 object.'
+      value: "Sometimes snap an\u0E01 push can be\nrebound with more than 2 object."
       objectReference: {fileID: 0}
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_fontSize
