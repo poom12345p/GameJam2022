@@ -6,7 +6,7 @@ public class UnitSprite : MonoBehaviour
 {
     BaseUnit unit;
     Tween moveTween;
-    [SerializeField] LinkParticleControl linkParticleControl;
+    [SerializeField] UnitParticleControl linkParticleControl;
     public void Init(BaseUnit _unit)
     {
         unit = _unit;

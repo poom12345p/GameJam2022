@@ -16,6 +16,7 @@ public class BaseUnit : MonoBehaviour
     public Action<FloorTile> OnMove;
     public Action OnFinishedMove;
     public Action OnFinishedAllMoveState;
+    public Action OnBounce;
     public Action<BaseUnit>   OnBind;
     public Action<BaseUnit>  OnUnBind;
     MapManager mapManager;
@@ -86,6 +87,7 @@ public class BaseUnit : MonoBehaviour
         if (moveCDCount > 0.0f) return false;
         Debug.Log($"{gameObject.name} pushed {_dir}");
         SoundManager.Instance.SfxPlay(bounceSound);
+        OnBounce.Invoke();
         return TryMoveDirection(_dir, this);
     }
     public void TryMoveDirection(int _h,int _v,BaseUnit _unit)
