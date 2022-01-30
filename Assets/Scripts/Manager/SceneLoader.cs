@@ -10,6 +10,7 @@ public class SceneLoader : Singleton<SceneLoader>
     public bool IsLoading { get => isLoading; set => isLoading = value; }
 
     [SerializeField] TransitionUI transitionUI;
+    [SerializeField] int loadCount = 0;
 
     bool isLoading;
 
@@ -42,12 +43,14 @@ public class SceneLoader : Singleton<SceneLoader>
     {
         if (isLoading) return;
         StartCoroutine(ieLoadScene(_index));
+        loadCount++;
     }
 
     public void LoadScene(string _sceneName)
     {
         if (isLoading) return;
         StartCoroutine(ieLoadScene(_sceneName));
+        loadCount++;
     }
 
     public IEnumerator ieLoadScene(int _index, Action _onComplete = null)
