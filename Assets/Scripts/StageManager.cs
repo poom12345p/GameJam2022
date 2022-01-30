@@ -18,21 +18,16 @@ public class StageManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("start stage");
         mapManager.Init(this);
-
         var unitTiles = GameObject.FindGameObjectWithTag("UnitTiles").transform;
-        Debug.Log($"unit tile ={unitTiles} ");
-        for (int i = 0; i < unitTiles.childCount; i++)
-        {
+        for (int i = 0; i < unitTiles.childCount; i++) {
             var _unit = unitTiles.GetChild(i).gameObject.GetComponent<BaseUnit>();
             _unit.Init(mapManager);
             FiltterUnit(_unit);
             baseUnits.Add(_unit);
         }
         unitTiles.GetComponent<TilemapRenderer>().enabled = false;
-        inGameUI.SetMove(moves);
-        inGameUI.SetTrophy(minimumMoves);
+        UpdateInGameUI();
     }
 
     private void Update()
@@ -50,6 +45,13 @@ public class StageManager : MonoBehaviour
         if (_unit is PlayerUnit) SubscribePlayer((PlayerUnit)_unit);
         else if (_unit.gameObject.GetComponent<Objective>() != null) objective = _unit;
     }
+    
+    private void UpdateInGameUI()
+    {
+        inGameUI.SetMove(moves);
+        inGameUI.SetTrophy(minimumMoves);
+    }
+
     private void SubscribePlayer(PlayerUnit _unit)
     {
         player = _unit;
@@ -65,13 +67,9 @@ public class StageManager : MonoBehaviour
     {
         if (objective)
         {
-            if (_player.BoundedUnit.Contains(objective)) 
-                Clear(); 
+            if (_player.BoundedUnit.Contains(objective)) Clear(); 
         }
-        else
-        {
-            Clear();
-        }
+        else Clear();
     }
 
     protected void Clear()
