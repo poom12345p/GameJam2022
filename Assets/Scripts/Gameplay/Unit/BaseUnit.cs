@@ -42,20 +42,16 @@ public class BaseUnit : MonoBehaviour
     {
         mapManager = _map;
         isInit = true;
-        if(mapManager.TryGetFloorTile(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y), out var _tile))
-        {
+        if(mapManager.TryGetFloorTile(Mathf.FloorToInt(transform.position.x), Mathf.FloorToInt(transform.position.y), out var _tile)){
             myTile = _tile;
             _tile.UnitMoveIn(this);
         }
         else
            Debug.LogError($"{gameObject.name} didn't place on floor tile,pls relocate this unit");
-
         spriteBody = GetComponentInChildren<UnitSprite>();
         if(spriteBody)
             spriteBody.Init(this);
-
         GetSound();
-
         StartBiundInteracting();
     }
 
@@ -73,7 +69,6 @@ public class BaseUnit : MonoBehaviour
         {
             moveCDCount -= Time.deltaTime;
         }
-
         if(isMoving && moveCDCount <= 0.0f)
         {
             isMoving = false;
@@ -85,7 +80,6 @@ public class BaseUnit : MonoBehaviour
     public bool TryBePushedDirection(Vector2Int _dir, BaseUnit _unit)
     {
         if (moveCDCount > 0.0f) return false;
-        Debug.Log($"{gameObject.name} pushed {_dir}");
         SoundManager.Instance.SfxPlay(bounceSound);
         _unit.OnPush?.Invoke();
         OnPush?.Invoke();
@@ -98,7 +92,6 @@ public class BaseUnit : MonoBehaviour
 
     public bool TryMoveDirection(Vector2Int _dir, BaseUnit _unit)
     {
-
         if (coreMoveUnit) return true;
         coreMoveUnit = _unit;
         if (coreMoveUnit != this) _unit.OnFinishedMove += FinishedMove;
@@ -115,32 +108,22 @@ public class BaseUnit : MonoBehaviour
     }
     protected bool TryMoveTo(Vector2Int _dir)
     {
-        if (mapManager.TryGetFloorTile(myTile.Pos.x + _dir.x, myTile.Pos.y + _dir.y, out var _floor))
-        {
-            if (_floor.TryGetUnit(out var onUnit))
-            {
-                Debug.Log($"{gameObject.name} movewith {_dir} but floor own by {onUnit}");
-                if (onUnit.TryMoveDirection(_dir, this))
-                {
+        if (mapManager.TryGetFloorTile(myTile.Pos.x + _dir.x, myTile.Pos.y + _dir.y, out var _floor)) {
+            if (_floor.TryGetUnit(out var onUnit)){
+                if (onUnit.TryMoveDirection(_dir, this)){
                     return MoveTo(_floor); ;
                 }
-
             }
             else
                 return MoveTo(_floor); ;
-
         }
         return false;
     }
     public bool CanMoveTo(Vector2Int _velocity)
     {
-        if (mapManager.TryGetFloorTile(myTile.Pos.x + _velocity.x, myTile.Pos.y + _velocity.y, out var _floor))
-        {
-            if (_floor.TryGetUnit(out var onUnit))
-            {
-                if (onUnit.CanMoveTo(_velocity))
-                {
-                    Debug.Log($"{gameObject.name} found {onUnit.name}");
+        if (mapManager.TryGetFloorTile(myTile.Pos.x + _velocity.x, myTile.Pos.y + _velocity.y, out var _floor)){
+            if (_floor.TryGetUnit(out var onUnit)) {
+                if (onUnit.CanMoveTo(_velocity)){
                     if (!boundedUnits.Contains(onUnit)) onUnit.TryMoveDirection(_velocity, onUnit);
                     return true;
                 }
@@ -166,12 +149,9 @@ public class BaseUnit : MonoBehaviour
         OnFinishedMove?.Invoke();
         OnFinishedMove = null;
         coreMoveUnit = null;
-        int b = boundedUnits.Count;
         StartBiundInteracting();
-        if (b < boundedUnits.Count) SoundManager.Instance.SfxPlay(bindSound,0.5f);
         OnFinishedAllMoveState?.Invoke();
         OnFinishedAllMoveState = null;
-        //InteractAdjacentTiles(TryInteractPushTile);
     }
     #endregion
     #region interaction
@@ -193,7 +173,9 @@ public class BaseUnit : MonoBehaviour
     #region bond
     public void StartBiundInteracting()
     {
+        int b = boundedUnits.Count;
         InteractAdjacentTiles(InteractBoundTile);
+        if (b < boundedUnits.Count) SoundManager.Instance.SfxPlay(bindSound, 0.5f);
     }
     protected void InteractBoundTile(FloorTile _tile)
     {
@@ -239,7 +221,6 @@ public class BaseUnit : MonoBehaviour
         SoundManager.Instance.SfxPlay(unbindSound,0.2f);
         RemoveAttached(_unit);
         _unit.RemoveAttached(this);
-        //StartBiundInteracting();
     }
     public void RemoveAttached(BaseUnit _unit)
     {
@@ -259,7 +240,6 @@ public class BaseUnit : MonoBehaviour
         {
             TryInteractPushUnit(unit,out _dir);
         }
-        //return false;
     }
     protected bool TryInteractPushUnit(BaseUnit _unit, out Vector2Int _dir)
     {
@@ -294,7 +274,6 @@ public class BaseUnit : MonoBehaviour
     #endregion
     #endregion
   
-
     public FloorTile GetFloor()
     {
         return myTile;
