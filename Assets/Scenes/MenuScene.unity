@@ -523,10 +523,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG
       objectReference: {fileID: 0}
-    - target: {fileID: 1431062689306293205, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
-      propertyPath: sfxClip
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_text
+      value: Start Jazz
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_fontAsset
       value: 
-      objectReference: {fileID: 8300000, guid: 0d89ef091003d0049a310734bbbd5cc3, type: 3}
+      objectReference: {fileID: 11400000, guid: fcee7c140d9d1114abaf41471009a84e, type: 2}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8243757956639067744, guid: fcee7c140d9d1114abaf41471009a84e, type: 2}
     - target: {fileID: 4752275051442312259, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: sfxClip
       value: 

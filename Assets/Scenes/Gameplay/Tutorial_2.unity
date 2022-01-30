@@ -189,18 +189,18 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_text
-      value: 'That the other types of Guard.
+      value: 'There are <color="red">red guards</color> same color as me, I can push
+        them away.
 
-        If I set by con guard I will
-        push me ,
-
-        else he can''t be push he will push me instead.
-
-'
+        if he stuck, I will be pushed instead.'
       objectReference: {fileID: 0}
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_fontSize
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
+      propertyPath: m_margin.y
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_fontSizeBase
@@ -306,6 +306,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1058687610814195533, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 559710151}
     - target: {fileID: 8516065367321212775, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -369,6 +373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1445f7e94027204eabe523e74c45fa6, type: 3}
+--- !u!20 &559710151 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8370666823898336303, guid: f1445f7e94027204eabe523e74c45fa6, type: 3}
+  m_PrefabInstance: {fileID: 559710150}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1963939226
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34118f4efc2f8a4cbb81d9abdacb237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxClip: {fileID: 8300000, guid: 5a9c98b6643c3284d9d22129b9bf50ef, type: 3}
+  sfxClip: {fileID: 8300000, guid: 0d89ef091003d0049a310734bbbd5cc3, type: 3}
 --- !u!1 &7184579321328773350
 GameObject:
   m_ObjectHideFlags: 0
