@@ -22,13 +22,16 @@ public class BaseUnit : MonoBehaviour
 
     [ReadOnly, SerializeField] private FloorTile myTile;
     [SerializeField] private float moveCD = 0.2f;
-    List<BaseUnit> boundedUnit = new List<BaseUnit>();
+    [SerializeField] AudioClip bindSound;
+    [SerializeField] AudioClip unbindSound;
+    [SerializeField] AudioClip bounceSound;
+    List<BaseUnit> boundedUnits = new List<BaseUnit>();
     protected bool isInit;
     private BaseUnit coreMoveUnit;
     protected float moveCDCount=0.0f;
     bool isMoving=false;
     protected UnitSprite spriteBody;
-    public List<BaseUnit> BoundedUnit { get => boundedUnit; }
+    public List<BaseUnit> BoundedUnit { get => boundedUnits; }
     public float MoveCD { get => moveCD; }
     public FloorTile MyTile { get => myTile; }
 
@@ -49,7 +52,17 @@ public class BaseUnit : MonoBehaviour
         spriteBody = GetComponentInChildren<UnitSprite>();
         if(spriteBody)
             spriteBody.Init(this);
+
+        GetSound();
+
         StartBiundInteracting();
+    }
+
+    public void GetSound()
+    {
+        if(bindSound == null) bindSound= Resources.Load<AudioClip>("Audio/Snap_Pianolist_bip");
+        if (unbindSound == null) unbindSound = Resources.Load<AudioClip>("Audio/break_Pianolist_bip");
+        if (bounceSound == null) bounceSound = Resources.Load<AudioClip>("Audio/Bounce_Pianolist_bip");
     }
 
 
@@ -72,7 +85,7 @@ public class BaseUnit : MonoBehaviour
     {
         if (moveCDCount > 0.0f) return false;
         Debug.Log($"{gameObject.name} pushed {_dir}");
-    
+        SoundManager.Instance.SfxPlay(bounceSound);
         return TryMoveDirection(_dir, this);
     }
     public void TryMoveDirection(int _h,int _v,BaseUnit _unit)
@@ -90,7 +103,7 @@ public class BaseUnit : MonoBehaviour
         if (TryMoveTo(_dir)) {
             isMoving = true;
             moveCDCount = moveCD;
-            CustomFor(boundedUnit, _u => _u.TryMoveDirection(_dir, this));
+            CustomFor(boundedUnits, _u => _u.TryMoveDirection(_dir, this));
         }
         else
             UnBindWith(_unit);
@@ -125,7 +138,7 @@ public class BaseUnit : MonoBehaviour
                 if (onUnit.CanMoveTo(_velocity))
                 {
                     Debug.Log($"{gameObject.name} found {onUnit.name}");
-                    if (!boundedUnit.Contains(onUnit)) onUnit.TryMoveDirection(_velocity, onUnit);
+                    if (!boundedUnits.Contains(onUnit)) onUnit.TryMoveDirection(_velocity, onUnit);
                     return true;
                 }
             }
@@ -150,7 +163,9 @@ public class BaseUnit : MonoBehaviour
         OnFinishedMove?.Invoke();
         OnFinishedMove = null;
         coreMoveUnit = null;
+        int b = boundedUnits.Count;
         StartBiundInteracting();
+        if (b < boundedUnits.Count) SoundManager.Instance.SfxPlay(bindSound,0.5f);
         OnFinishedAllMoveState?.Invoke();
         OnFinishedAllMoveState = null;
         //InteractAdjacentTiles(TryInteractPushTile);
@@ -187,7 +202,7 @@ public class BaseUnit : MonoBehaviour
 
     protected void InteractBoundUnit(BaseUnit _unit)
     {
-       if (boundedUnit.Contains(_unit))
+       if (boundedUnits.Contains(_unit))
             return;
        if(_unit.Type != Type){
             BindWith(_unit);
@@ -202,33 +217,33 @@ public class BaseUnit : MonoBehaviour
     public void AddAttached(BaseUnit _unit)
     {
 
-        if (!boundedUnit.Contains(_unit))
+        if (!boundedUnits.Contains(_unit))
         {
             OnBind?.Invoke(_unit);
-            boundedUnit.Add(_unit);
+            boundedUnits.Add(_unit);
         }
     }
     public void UnBoundWithAll()
     {
         Debug.Log($"{gameObject.name}  unbind All");
-        CustomFor(boundedUnit, (_unit) => {
+        CustomFor(boundedUnits, (_unit) => {
             UnBindWith(_unit);
         });
     }
     public void UnBindWith(BaseUnit _unit)
     {
         Debug.Log($"{gameObject.name} unbound {_unit.name}");
-       
+        SoundManager.Instance.SfxPlay(unbindSound,0.2f);
         RemoveAttached(_unit);
         _unit.RemoveAttached(this);
         //StartBiundInteracting();
     }
     public void RemoveAttached(BaseUnit _unit)
     {
-        if (boundedUnit.Contains(_unit))
+        if (boundedUnits.Contains(_unit))
         {
             OnUnBind?.Invoke(_unit);
-            boundedUnit.Remove(_unit);
+            boundedUnits.Remove(_unit);
         }
     }
     #endregion
@@ -246,7 +261,7 @@ public class BaseUnit : MonoBehaviour
     protected bool TryInteractPushUnit(BaseUnit _unit, out Vector2Int _dir)
     {
         _dir = Vector2Int.zero;
-        if (boundedUnit.Contains(_unit))
+        if (boundedUnits.Contains(_unit))
             return false;
         if (_unit.Type == Type)
         {
