@@ -814,7 +814,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 350}
+  m_SizeDelta: {x: 500, y: 370}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8612601341841626795
 CanvasRenderer:
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ac7ef8aaab4caaf42841ac049157f3a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 030feb1515dcd144c88cb6b46b9dd723, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1412,7 +1412,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a0b32dc1f6bb2f43a82df2776f0c011, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb5902b405492d24dafd07010bf6d9c3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34118f4efc2f8a4cbb81d9abdacb237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxClip: {fileID: 8300000, guid: 5a9c98b6643c3284d9d22129b9bf50ef, type: 3}
+  sfxClip: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
 --- !u!1 &5995074103645142580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1901,7 +1901,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34118f4efc2f8a4cbb81d9abdacb237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxClip: {fileID: 8300000, guid: 5a9c98b6643c3284d9d22129b9bf50ef, type: 3}
+  sfxClip: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
 --- !u!1 &6946881304206877812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,7 +2061,7 @@ MonoBehaviour:
   isInterruptible: 0
   bgmSlider: {fileID: 3605214619024279327}
   sfxSlider: {fileID: 877555277981348941}
-  sfxClip: {fileID: 8300000, guid: 5a9c98b6643c3284d9d22129b9bf50ef, type: 3}
+  sfxClip: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
 --- !u!95 &4371773854942960725
 Animator:
   serializedVersion: 3

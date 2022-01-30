@@ -135,26 +135,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 313175633305438833, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 313175633305438833, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 436694722980314840, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 436694722980314840, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 436694722980314840, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1146129993102860717, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -167,14 +147,6 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2436441432411480701, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2436441432411480701, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3789234462697361745, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -183,7 +155,7 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3966301052174726198, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
+    - target: {fileID: 4582703765714272414, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: sfxClip
       value: 
       objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
@@ -193,18 +165,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696386788792672196, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746718330230729516, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746718330230729516, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4746718330230729516, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5360023699923592875, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
@@ -295,10 +255,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8338502745323454708, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
-      propertyPath: sfxClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
     - target: {fileID: 8907991352455970843, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_Camera
       value: 
@@ -307,6 +263,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9197640810019828975, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
     - target: {fileID: 9208993519301483517, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

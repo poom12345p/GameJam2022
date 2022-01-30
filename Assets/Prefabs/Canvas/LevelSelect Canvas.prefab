@@ -633,7 +633,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
   m_CellSize: {x: 150, y: 150}
@@ -760,13 +760,13 @@ MonoBehaviour:
   isInterruptible: 0
   buttonPrefab: {fileID: 3894638280990514456}
   scenesList:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Tutorial_1
+  - Tutorial_2
+  - Tutorial_3
+  - Stage_1
+  - Stage_2
+  - Stage_3
+  - Stage_4
 --- !u!1 &6153824728156641786
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,7 +913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a34118f4efc2f8a4cbb81d9abdacb237, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sfxClip: {fileID: 8300000, guid: 5a9c98b6643c3284d9d22129b9bf50ef, type: 3}
+  sfxClip: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
 --- !u!1001 &5324968016746080081
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -939,7 +939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_AnchorMin.x
@@ -947,15 +947,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -987,11 +987,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 450
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -75
       objectReference: {fileID: 0}
     - target: {fileID: 362494845196691448, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1011,8 +1011,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5073464101386054848, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9217354216532916809, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
+      propertyPath: lockClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb7208d681624bf429e67f53df2e984b, type: 3}
+    - target: {fileID: 9217354216532916809, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
+      propertyPath: clickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d89ef091003d0049a310734bbbd5cc3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb998c66b8b386342a1e64205c1f43d7, type: 3}
 --- !u!224 &5539921320745926825 stripped
