@@ -4,9 +4,16 @@ using UnityEngine;
 public class PlayerUnit : BaseUnit
 {
     [SerializeField]private float inputCD =0.25f;
+    [SerializeField] AudioClip moveSound;
     private float inputCDCount=0.0f;
     int _vh=0, _vv = 0;
     public bool canMove = true;
+
+    public override void Init(MapManager _map)
+    {
+        base.Init(_map);
+        moveSound= Resources.Load<AudioClip>("Audio/Walk_bip");
+    }
     protected override void Update()
     {
         base.Update();
@@ -20,6 +27,7 @@ public class PlayerUnit : BaseUnit
            if(_vh == 0) _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
             if (_vv != 0 || _vh != 0){
                 inputCDCount = inputCD;
+                SoundManager.Instance.SfxPlay(moveSound,0.2f);
                 TryMoveDirection(_vh, _vv,this);
             }
         }
