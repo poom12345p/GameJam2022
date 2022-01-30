@@ -31,10 +31,7 @@ public class RewardUI : BaseUIAnimator
             if (_move <= _minimum)  GameManager.Instance.SetInt(_currentScene.name + "_Trophy", 1);
             GameManager.Instance.SetInt(_currentScene.name, _move);
         }
-        if (_currentScene.buildIndex > GameManager.Instance.GetUnlockedLevel())
-        {
-            GameManager.Instance.SetUnlockedLevel(_currentScene.buildIndex);
-        }
+        if (_currentScene.buildIndex > GameManager.Instance.GetUnlockedLevel()) GameManager.Instance.SetUnlockedLevel(_currentScene.buildIndex);
     }
 
     public void UpdateMoveText(int _move)
