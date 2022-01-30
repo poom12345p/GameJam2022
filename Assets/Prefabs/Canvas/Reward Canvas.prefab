@@ -392,7 +392,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 18180229314283851}
         m_TargetAssemblyTypeName: RewardUI, Assembly-CSharp
-        m_MethodName: Next_Btn
+        m_MethodName: Btn_Next
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -614,7 +614,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 18180229314283851}
         m_TargetAssemblyTypeName: RewardUI, Assembly-CSharp
-        m_MethodName: Retry_Btn
+        m_MethodName: Btn_Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

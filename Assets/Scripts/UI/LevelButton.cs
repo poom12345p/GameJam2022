@@ -9,7 +9,8 @@ public class LevelButton : MonoBehaviour
     public string SceneName { get => sceneName; set => sceneName = value; }
 
     [SerializeField] TextMeshProUGUI levelText;
-    [SerializeField] Image medalImage;
+    [SerializeField] Image stampImage;
+    [SerializeField] Image trophyImage;
     [SerializeField] Image lockImage;
     [SerializeField] AudioClip clickClip;
     [SerializeField] AudioClip lockClip;
@@ -19,7 +20,8 @@ public class LevelButton : MonoBehaviour
 
     private void Awake()
     {
-        medalImage.enabled = false;
+        trophyImage.enabled = false;
+        stampImage.enabled = false;
     }
 
     public void SetLevelText(int _level)
@@ -43,7 +45,12 @@ public class LevelButton : MonoBehaviour
 
     public void ShowMedal()
     {
-        medalImage.enabled = true;
+        trophyImage.enabled = true;
+    }
+
+    public void ShowStamp()
+    {
+        stampImage.enabled = true;
     }
 
     public void Btn_SelectLevel()

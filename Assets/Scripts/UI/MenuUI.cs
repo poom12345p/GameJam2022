@@ -33,4 +33,9 @@ public class MenuUI : BaseUIAnimator
     {
         Application.Quit();
     }
+
+    public void Btn_MainMenu()
+    {
+        SceneLoader.Instance.LoadMenuScene();
+    }
 }
