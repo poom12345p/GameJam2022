@@ -26,8 +26,9 @@ public class RewardUI : BaseUIAnimator
     public void UpdateSave(int _minimum, int _move)
     {
         var _currentScene = SceneManager.GetActiveScene();
-        if (_move < GameManager.Instance.GetInt(_currentScene.name))
+        if (GameManager.Instance.GetInt(_currentScene.name) == 0 || _move < GameManager.Instance.GetInt(_currentScene.name))
         {
+            if (_move <= _minimum)  GameManager.Instance.SetInt(_currentScene.name + "_Trophy", 1);
             GameManager.Instance.SetInt(_currentScene.name, _move);
         }
         if (_currentScene.buildIndex > GameManager.Instance.GetUnlockedLevel())
@@ -41,12 +42,12 @@ public class RewardUI : BaseUIAnimator
         moveText.text = "Move Count : " + _move;
     }
 
-    public void Retry_Btn()
+    public void Btn_Retry()
     {
         SceneLoader.Instance.ReloadScene();
     }
 
-    public void Next_Btn()
+    public void Btn_Next()
     {
         SceneLoader.Instance.LoadNextScene();
     }

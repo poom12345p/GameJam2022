@@ -12,13 +12,29 @@ public class LevelSelectUI : BaseUIAnimator
     {
         for (int i = 0; i < scenesList.Count; i++)
         {
-            var _button = Instantiate(buttonPrefab, buttonPrefab.transform.parent);
-            _button.SetLevelText(i + 1);
-            _button.SceneName = scenesList[i];
-            _button.gameObject.SetActive(true);
-            if (_button.transform.GetSiblingIndex() <= GameManager.Instance.UnlockedLevel) _button.Unlock();
-            else _button.Lock();
+            CreateLevelButton(i);
         }
+    }
+
+    public LevelButton CreateLevelButton(int _index)
+    {
+        var _button = Instantiate(buttonPrefab, buttonPrefab.transform.parent);
+        _button.SetLevelText(_index + 1);
+        _button.SceneName = scenesList[_index];
+        _button.gameObject.SetActive(true);
+        UpdateButtonStatus(_button, _index);
+        return _button;
+    }
+
+    void UpdateButtonStatus(LevelButton _button, int _index)
+    {
+        if (GameManager.Instance.GetInt(scenesList[_index] + "_Trophy") == 1) _button.ShowMedal();
+        if (_button.transform.GetSiblingIndex() <= GameManager.Instance.UnlockedLevel)
+        {
+            if (_button.transform.GetSiblingIndex() != GameManager.Instance.UnlockedLevel) _button.ShowStamp();
+            _button.Unlock();
+        }
+        else _button.Lock();
     }
 
     public void Back_Btn()

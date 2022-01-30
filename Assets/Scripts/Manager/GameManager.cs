@@ -13,7 +13,6 @@ public class GameManager : Singleton<GameManager>
 
     private void Awake()
     {
-        PlayerPrefs.DeleteAll();
         base.Awake();
         if (SoundManager.Instance.BgmAudioSource.clip == null) SoundManager.Instance.BgmPlay(bgmClip);
         if (GetUnlockedLevel() < 1) SetUnlockedLevel(1);
@@ -39,5 +38,12 @@ public class GameManager : Singleton<GameManager>
     public int GetInt(string _keyword)
     {
         return PlayerPrefs.GetInt(_keyword);
+    }
+
+    public void DeleteSave()
+    {
+        PlayerPrefs.DeleteAll();
+        if (GetUnlockedLevel() < 1) SetUnlockedLevel(1);
+        SceneLoader.Instance.LoadMenuScene();
     }
 }

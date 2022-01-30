@@ -36,4 +36,9 @@ public class OptionUI : BaseUIAnimator
     {
         base.Hide();
     }
+
+    public void Btn_DeleteSave()
+    {
+        GameManager.Instance.DeleteSave();
+    }
 }
