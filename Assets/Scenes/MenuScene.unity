@@ -183,6 +183,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3966301052174726198, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
     - target: {fileID: 4696386788792672196, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -291,6 +295,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Option Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8338502745323454708, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
     - target: {fileID: 8907991352455970843, guid: c500664cc1d037c4ba35ed7f623b18ff, type: 3}
       propertyPath: m_Camera
       value: 
@@ -473,7 +481,7 @@ PrefabInstance:
     - target: {fileID: 3779031337817331841, guid: 6a589432f248f8943acd867e1fbcbe0e, type: 3}
       propertyPath: bgmClip
       value: 
-      objectReference: {fileID: 8300000, guid: 797d5c62314c4104bbfef66e962280a9, type: 3}
+      objectReference: {fileID: 8300000, guid: 38c8cf0d5d6888c47b62366930c7c663, type: 3}
     - target: {fileID: 3779031337817331841, guid: 6a589432f248f8943acd867e1fbcbe0e, type: 3}
       propertyPath: audioClip
       value: 
@@ -539,10 +547,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BG
       objectReference: {fileID: 0}
+    - target: {fileID: 1431062689306293205, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d89ef091003d0049a310734bbbd5cc3, type: 3}
+    - target: {fileID: 4752275051442312259, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
     - target: {fileID: 5446510717790055091, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: optionUI
       value: 
       objectReference: {fileID: 1304530437}
+    - target: {fileID: 6454859286607213760, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
+    - target: {fileID: 6950979632751638510, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
     - target: {fileID: 7184579321328773346, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_Pivot.x
       value: 0

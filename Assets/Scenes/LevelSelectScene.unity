@@ -283,6 +283,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3894638280990514456, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: lockClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb7208d681624bf429e67f53df2e984b, type: 3}
+    - target: {fileID: 3894638280990514456, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: clickClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0d89ef091003d0049a310734bbbd5cc3, type: 3}
     - target: {fileID: 4273064487075520067, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -443,6 +451,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8525032854862833651, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
+      propertyPath: sfxClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
     - target: {fileID: 8686925992531281153, guid: 7c30369c05f583449b6b894f83f09650, type: 3}
       propertyPath: m_Enabled
       value: 1
