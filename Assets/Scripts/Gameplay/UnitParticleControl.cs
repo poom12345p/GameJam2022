@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LinkParticleControl : MonoBehaviour
+public class UnitParticleControl : MonoBehaviour
 {
     [SerializeField] GameObject linkParticlePrefab;
+    [SerializeField] GameObject bounceParticlePrefab;
     Dictionary<Vector2Int, GameObject> LinkParticles;
     Dictionary<BaseUnit, GameObject> LinkParticlesUnit;
     BaseUnit unit;
@@ -16,6 +17,19 @@ public class LinkParticleControl : MonoBehaviour
         unit.OnBind += ShowBondParticle;
         unit.OnUnBind += HideBondParticle;
 
+    }
+
+    private void InitParticle()
+    {
+        if(unit.Type == BaseUnit.UnitType.RED)
+        {
+            if(linkParticlePrefab == null) Resources.Load<GameObject>("Particle/Linkparticle_Red");
+
+        }
+        else if (unit.Type == BaseUnit.UnitType.BLUE)
+        {
+            if (linkParticlePrefab == null) Resources.Load<GameObject>("Particle/Linkparticle_Blue Variant");
+        }
     }
 
     private void InitDict()
