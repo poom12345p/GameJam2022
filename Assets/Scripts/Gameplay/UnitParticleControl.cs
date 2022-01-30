@@ -5,7 +5,7 @@ using UnityEngine;
 public class UnitParticleControl : MonoBehaviour
 {
     [SerializeField] GameObject linkParticlePrefab;
-    [SerializeField] GameObject bounceParticlePrefab;
+    [SerializeField] ParticleSystem bounceParticlePrefab;
     Dictionary<Vector2Int, GameObject> LinkParticles;
     Dictionary<BaseUnit, GameObject> LinkParticlesUnit;
     BaseUnit unit;
@@ -13,9 +13,11 @@ public class UnitParticleControl : MonoBehaviour
     public void Init(BaseUnit _unit)
     {
         unit = _unit;
+        InitParticle();
         InitDict();
         unit.OnBind += ShowBondParticle;
         unit.OnUnBind += HideBondParticle;
+        unit.OnPush += ShowBounceParticle;
 
     }
 
@@ -24,12 +26,20 @@ public class UnitParticleControl : MonoBehaviour
         if(unit.Type == BaseUnit.UnitType.RED)
         {
             if(linkParticlePrefab == null) Resources.Load<GameObject>("Particle/Linkparticle_Red");
+            if (bounceParticlePrefab == null) bounceParticlePrefab = InitParticle("BouneParticle_Red Variant");
 
         }
         else if (unit.Type == BaseUnit.UnitType.BLUE)
         {
             if (linkParticlePrefab == null) Resources.Load<GameObject>("Particle/Linkparticle_Blue Variant");
+            if (bounceParticlePrefab == null) bounceParticlePrefab = InitParticle("BouneParticle_Blue Variant");
         }
+    }
+
+    private ParticleSystem InitParticle(string _name)
+    {
+        var _p= Resources.Load<ParticleSystem>($"Particle/{_name}");
+        return Instantiate(_p, transform);
     }
 
     private void InitDict()
@@ -57,5 +67,10 @@ public class UnitParticleControl : MonoBehaviour
     {
         LinkParticlesUnit[_unit].SetActive(false);
         LinkParticlesUnit.Remove(_unit);
+    }
+
+    public void ShowBounceParticle()
+    {
+        bounceParticlePrefab.Play();
     }
 }
