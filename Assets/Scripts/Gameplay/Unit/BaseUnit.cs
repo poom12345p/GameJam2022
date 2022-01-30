@@ -16,7 +16,7 @@ public class BaseUnit : MonoBehaviour
     public Action<FloorTile> OnMove;
     public Action OnFinishedMove;
     public Action OnFinishedAllMoveState;
-    public Action OnBounce;
+    public Action OnPush;
     public Action<BaseUnit>   OnBind;
     public Action<BaseUnit>  OnUnBind;
     MapManager mapManager;
@@ -82,12 +82,13 @@ public class BaseUnit : MonoBehaviour
     }
     #region move
 
-    public bool TryPushDirection(Vector2Int _dir, BaseUnit _unit)
+    public bool TryBePushedDirection(Vector2Int _dir, BaseUnit _unit)
     {
         if (moveCDCount > 0.0f) return false;
         Debug.Log($"{gameObject.name} pushed {_dir}");
         SoundManager.Instance.SfxPlay(bounceSound);
-        OnBounce.Invoke();
+        _unit.OnPush?.Invoke();
+        OnPush?.Invoke();
         return TryMoveDirection(_dir, this);
     }
     public void TryMoveDirection(int _h,int _v,BaseUnit _unit)
@@ -272,13 +273,13 @@ public class BaseUnit : MonoBehaviour
             if (_unit.CanMoveTo(dir))
             {
                 Debug.Log($"{gameObject.name} push {_unit.name} with {dir}");
-                _unit.TryPushDirection(dir, _unit);
+                _unit.TryBePushedDirection(dir, this);
             }
             else
             {
                 Debug.Log($"{gameObject.name} is knocked back by{_unit.name} with {dir}");
                 UnBoundWithAll();
-                TryPushDirection(-dir, this);
+               TryBePushedDirection(-dir, _unit);
                 _dir = -dir;
                 return true;
             }
