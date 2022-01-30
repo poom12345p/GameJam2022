@@ -47,7 +47,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.6
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 00000000f303174b
   m_LightCookieSprite: {fileID: 0}
@@ -207,4 +207,4 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 409263990acb7224aaf317f7d15c85d3, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 9df82b9f5064c4a488f89eab986c6247, type: 2}
