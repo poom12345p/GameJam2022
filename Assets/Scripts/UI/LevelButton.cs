@@ -8,12 +8,14 @@ public class LevelButton : MonoBehaviour
 {
     public string SceneName { get => sceneName; set => sceneName = value; }
 
+    [SerializeField] Image backgroundImage;
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] Image stampImage;
     [SerializeField] Image trophyImage;
     [SerializeField] Image lockImage;
     [SerializeField] AudioClip clickClip;
     [SerializeField] AudioClip lockClip;
+    [SerializeField] List<Sprite> spritesList;
 
     string sceneName;
     bool isLock;
@@ -22,6 +24,7 @@ public class LevelButton : MonoBehaviour
     {
         trophyImage.enabled = false;
         stampImage.enabled = false;
+        backgroundImage.sprite = spritesList[Random.Range(0, spritesList.Count)];
     }
 
     public void SetLevelText(int _level)
