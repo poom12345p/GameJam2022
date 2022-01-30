@@ -5,6 +5,10 @@ using System;
 
 public class TransitionUI : BaseUIAnimator
 {
+    private void Awake()
+    {
+    }
+
     public void FadeIn(Action _onComplete = null)
     {
         base.Show(_onComplete);
@@ -17,13 +21,13 @@ public class TransitionUI : BaseUIAnimator
 
     public IEnumerator ieFadeIn(Action _onComplete = null)
     {
-        if (MainCanvas.worldCamera == null) MainCanvas.worldCamera = Camera.main;
+        //if (MainCanvas.worldCamera == null) MainCanvas.worldCamera = Camera.main;
         yield return base.ieShow(_onComplete);
     }
 
     public IEnumerator ieFadeOut(Action _onComplete = null)
     {
-        if (MainCanvas.worldCamera == null) MainCanvas.worldCamera = Camera.main;
+        //if (MainCanvas.worldCamera == null) MainCanvas.worldCamera = Camera.main;
         yield return base.ieHide(_onComplete);
     }
 }
