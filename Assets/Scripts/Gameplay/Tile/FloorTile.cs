@@ -4,15 +4,13 @@ using UnityEngine;
 using Unity.Collections;
 public class FloorTile : MapTile
 {
-    [ReadOnly]public BaseUnit UnitOnTile;
-    
+    [ReadOnly] public BaseUnit UnitOnTile;
+
     public virtual bool UnitMoveIn(BaseUnit _unit)
     {
-        if (UnitOnTile)
-            return false;
+        if (UnitOnTile) return false;
         UnitOnTile = _unit;
-            return true;
-
+        return true;
     }
 
     public void MoveOut(BaseUnit _unit)

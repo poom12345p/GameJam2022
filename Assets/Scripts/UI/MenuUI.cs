@@ -10,7 +10,6 @@ public class MenuUI : BaseUIAnimator
     public void Btn_Play()
     {
         SceneLoader.Instance.LoadScene(GameManager.Instance.UnlockedLevel + 1);
-
     }
 
     public void Btn_LevelSelect()

@@ -12,10 +12,4 @@ public class CharacterSprite : UnitSprite
     {
         scaleTween = transform.DOScale(distore,1.0f).SetLoops(-1, LoopType.Yoyo).SetEase(Ease.InOutQuad);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
