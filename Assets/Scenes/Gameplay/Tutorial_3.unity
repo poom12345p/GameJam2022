@@ -303,7 +303,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_text
-      value: 'If you don''t want Guard to stick with you.
+      value: 'If you do not want Guard to stick with you.
 
         you can get rid
         of him by using wall or obstacle.
