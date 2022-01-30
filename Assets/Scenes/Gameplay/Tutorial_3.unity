@@ -303,7 +303,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_text
-      value: 'If you don''t want Guard to stick with you.
+      value: 'If you do not want Guard to stick with you.
 
         you can get rid
         of him by using wall or obstacle.
@@ -418,6 +418,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1058687610814195533, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1066988544}
     - target: {fileID: 8516065367321212775, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -481,6 +485,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1445f7e94027204eabe523e74c45fa6, type: 3}
+--- !u!20 &1066988544 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 8370666823898336303, guid: f1445f7e94027204eabe523e74c45fa6, type: 3}
+  m_PrefabInstance: {fileID: 1066988543}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1116766503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3997,7 +4006,7 @@ PrefabInstance:
     - target: {fileID: 1174623049709142228, guid: 54eb093426da2754a8798d2df7b9eba7, type: 3}
       propertyPath: m_TileAssetArray.Array.data[0].m_Data
       value: 
-      objectReference: {fileID: 11400000, guid: 056554f0de547d14599ffc994dc6df4e, type: 2}
+      objectReference: {fileID: 11400000, guid: 039a476b9a2eaf442a1f53636d9b332f, type: 2}
     - target: {fileID: 1174623049709142228, guid: 54eb093426da2754a8798d2df7b9eba7, type: 3}
       propertyPath: m_TileAssetArray.Array.data[1].m_Data
       value: 
@@ -4081,7 +4090,7 @@ PrefabInstance:
     - target: {fileID: 1174623049709142228, guid: 54eb093426da2754a8798d2df7b9eba7, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[12].m_Data
       value: 
-      objectReference: {fileID: 21300000, guid: e1aaf5c725b15724ca00bbfb875db6c5, type: 3}
+      objectReference: {fileID: 21300000, guid: f0bb99ea36338d04fa1b638040da7b0a, type: 3}
     - target: {fileID: 1174623049709142228, guid: 54eb093426da2754a8798d2df7b9eba7, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[13].m_Data
       value: 

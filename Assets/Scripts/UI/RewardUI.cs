@@ -10,10 +10,12 @@ public class RewardUI : BaseUIAnimator
 {
     [SerializeField] TextMeshProUGUI moveText;
     [SerializeField] Image trophy;
+    [SerializeField] AudioClip victoryClip;
 
     public override void Show(Action _onComplete = null)
     {
         base.Show(_onComplete);
+        SoundManager.Instance.SfxPlay(victoryClip);
     }
 
     public void ShowReward(int _minimum, int _move)
