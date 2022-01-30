@@ -36,5 +36,6 @@ public class MenuUI : BaseUIAnimator
     public void Btn_MainMenu()
     {
         SceneLoader.Instance.LoadMenuScene();
+        SoundManager.Instance.BgmAudioSource.Play();
     }
 }

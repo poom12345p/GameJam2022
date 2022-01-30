@@ -521,15 +521,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 935149022706236617, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_Color.b
-      value: 0.514151
+      value: 0.6313726
       objectReference: {fileID: 0}
     - target: {fileID: 935149022706236617, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.38431376
       objectReference: {fileID: 0}
     - target: {fileID: 935149022706236617, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_Color.r
-      value: 0.9963743
+      value: 0.6745098
       objectReference: {fileID: 0}
     - target: {fileID: 936978363115594955, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_Name
@@ -540,21 +540,77 @@ PrefabInstance:
       value: Start Jazz
       objectReference: {fileID: 0}
     - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_margin.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: fcee7c140d9d1114abaf41471009a84e, type: 2}
     - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 8243757956639067744, guid: fcee7c140d9d1114abaf41471009a84e, type: 2}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151351276330523162, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 4752275051442312259, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: sfxClip
       value: 
       objectReference: {fileID: 8300000, guid: 475316d5bb0ae84428465a6a36bc80ab, type: 3}
+    - target: {fileID: 5393647148953565040, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9990483
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393647148953565040, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.043619405
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393647148953565040, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5446510717790055091, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: optionUI
       value: 
       objectReference: {fileID: 1304530437}
+    - target: {fileID: 6382335364074371491, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382335364074371491, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6382335364074371491, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 6454859286607213760, guid: 17f6b0c742fbbec4b9e3250dbf480fde, type: 3}
       propertyPath: sfxClip
       value: 
