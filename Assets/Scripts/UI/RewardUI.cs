@@ -11,6 +11,7 @@ public class RewardUI : BaseUIAnimator
     [SerializeField] TextMeshProUGUI moveText;
     [SerializeField] Image trophy;
     [SerializeField] AudioClip victoryClip;
+    [SerializeField] GameObject particle;
 
     public override void Show(Action _onComplete = null)
     {
@@ -20,7 +21,11 @@ public class RewardUI : BaseUIAnimator
 
     public void ShowReward(int _minimum, int _move)
     {
-        if (_move <= _minimum) trophy.enabled = true;
+        if (_move <= _minimum)
+        {
+            trophy.enabled = true;
+            particle.SetActive(true);
+        }
         else trophy.enabled = false;
         UpdateSave(_minimum, _move);
     }
