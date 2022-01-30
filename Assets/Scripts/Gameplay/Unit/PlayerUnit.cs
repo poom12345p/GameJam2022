@@ -20,11 +20,10 @@ public class PlayerUnit : BaseUnit
         if (!isInit) return;
         if (inputCDCount > 0.0f)
             inputCDCount -= Time.deltaTime;
-         if(canMove && moveCDCount <= 0.0f && inputCDCount <= 0.0f)
-        {
+        if(canMove && moveCDCount <= 0.0f && inputCDCount <= 0.0f){
             ResetInput();
             _vh = IsButtonRight() ? 1 : IsButtonLeft() ? -1 : 0;
-           if(_vh == 0) _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
+            if(_vh == 0) _vv = IsButtonUp() ? 1: IsButtonDown()?-1:0;
             if (_vv != 0 || _vh != 0){
                 inputCDCount = inputCD;
                 SoundManager.Instance.SfxPlay(moveSound,0.2f);
