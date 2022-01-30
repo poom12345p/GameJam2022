@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8370666823898336272, guid: f1445f7e94027204eabe523e74c45fa6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.42
+      value: -5.87
       objectReference: {fileID: 0}
     - target: {fileID: 8370666823898336272, guid: f1445f7e94027204eabe523e74c45fa6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -474,12 +474,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_text
-      value: 'remember if you want to get the trophy.
-
-        you MUST move no more
-        than trophy point
-
-        in bottom-left coner.'
+      value: "remember if you want to get the trophy.\nyou MUST move equal or less
+        \nthan trophy point in bottom-left coner."
       objectReference: {fileID: 0}
     - target: {fileID: 231758527060611389, guid: db3b4a32bfdfdeb46b6bd9bb69a490e2, type: 3}
       propertyPath: m_fontSize
